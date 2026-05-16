@@ -3,230 +3,69 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>ZIGA Production — 14 พฤษภาคม 2569</title>
+<title>ZIGA Production — 15 พฤษภาคม 2569</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
 :root {
-  --green-dark: #065F46;
-  --green-mid:  #059669;
-  --green-light:#34D399;
-  --green-bg:   #ECFDF5;
-  --bg:         #F5F4F0;
-  --ink:        #1A1916;
-  --ink-soft:   #6B7280;
-  --red:        #DC2626;
-  --red-bg:     #FECACA;
-  --red-bg-soft:#FEE2E2;
-  --orange:     #F97316;
-  --orange-bg:  #FED7AA;
-  --orange-bg-soft:#FFEDD5;
-  --blue:       #3D7FFF;
-  --blue-bg:    #DBEAFE;
-  --grey:       #6B7280;
-  --grey-bg:    #E5E7EB;
-  --line:       #E5E7EB;
+  --green-dark: #065F46; --green-mid: #059669; --green-light:#34D399; --green-bg: #ECFDF5;
+  --bg: #F5F4F0; --ink: #1A1916; --ink-soft: #6B7280;
+  --red: #DC2626; --red-bg: #FECACA; --red-bg-soft:#FEE2E2;
+  --orange: #F97316; --orange-bg: #FED7AA; --orange-bg-soft:#FFEDD5;
+  --blue: #3D7FFF; --blue-bg: #DBEAFE; --grey: #6B7280; --grey-bg: #E5E7EB; --line: #E5E7EB;
 }
 * { box-sizing: border-box; }
 html,body { margin:0; padding:0; }
-body {
-  font-family: 'IBM Plex Sans Thai', system-ui, sans-serif;
-  background: var(--bg);
-  color: var(--ink);
-  font-size: 14px;
-  line-height: 1.55;
-  padding: 28px 24px;
-  max-width: 1280px;
-  margin: 0 auto;
-}
+body { font-family: 'IBM Plex Sans Thai', system-ui, sans-serif; background: var(--bg); color: var(--ink); font-size: 14px; line-height: 1.55; padding: 28px 24px; max-width: 1280px; margin: 0 auto; }
 .mono { font-family: 'IBM Plex Mono', monospace; }
 
-/* Header */
-.hdr {
-  border-bottom: 3px solid var(--green-dark);
-  padding-bottom: 18px;
-  margin-bottom: 28px;
-}
-.hdr h1 {
-  font-size: 32px;
-  font-weight: 700;
-  color: var(--green-dark);
-  margin: 0 0 6px 0;
-  letter-spacing: -0.5px;
-}
+.hdr { border-bottom: 3px solid var(--green-dark); padding-bottom: 18px; margin-bottom: 28px; }
+.hdr h1 { font-size: 32px; font-weight: 700; color: var(--green-dark); margin: 0 0 6px 0; letter-spacing: -0.5px; }
 .hdr .sub { color: var(--ink-soft); font-size: 14px; }
 .hdr .sub b { color: var(--ink); font-weight: 600; }
 .hdr .meta { color: var(--ink-soft); font-size: 12px; margin-top: 8px; font-style: italic; }
 
-/* Section */
 .section { margin-bottom: 32px; }
-.section h2 {
-  font-size: 20px;
-  font-weight: 700;
-  color: var(--green-dark);
-  margin: 0 0 14px 0;
-  padding-bottom: 8px;
-  border-bottom: 2px solid var(--green-light);
-}
+.section h2 { font-size: 20px; font-weight: 700; color: var(--green-dark); margin: 0 0 14px 0; padding-bottom: 8px; border-bottom: 2px solid var(--green-light); }
 
-/* Status summary cards */
-.status-grid {
-  display: grid;
-  grid-template-columns: repeat(7, 1fr);
-  gap: 10px;
-  margin-bottom: 20px;
-}
-.status-card {
-  background: white;
-  border: 1px solid var(--line);
-  border-radius: 10px;
-  padding: 14px 12px;
-  text-align: center;
-}
-.status-card .lbl {
-  font-size: 11px;
-  font-weight: 600;
-  color: var(--ink-soft);
-  text-transform: uppercase;
-  letter-spacing: 0.4px;
-  margin-bottom: 4px;
-}
-.status-card .val {
-  font-family: 'IBM Plex Mono', monospace;
-  font-size: 26px;
-  font-weight: 600;
-  line-height: 1.1;
-}
-.status-card.bot      { border-top: 4px solid var(--red); }
-.status-card.bot .val { color: var(--red); }
-.status-card.beh      { border-top: 4px solid var(--orange); }
-.status-card.beh .val { color: var(--orange); }
-.status-card.ok       { border-top: 4px solid var(--green-mid); }
-.status-card.ok .val  { color: var(--green-dark); }
-.status-card.over     { border-top: 4px solid var(--blue); }
-.status-card.over .val{ color: var(--blue); }
-.status-card.ns       { border-top: 4px solid var(--grey); }
-.status-card.ns .val  { color: var(--grey); }
-.status-card.unp      { border-top: 4px solid var(--blue); }
-.status-card.unp .val { color: var(--blue); }
+.status-grid { display: grid; grid-template-columns: repeat(7, 1fr); gap: 10px; margin-bottom: 20px; }
+.status-card { background: white; border: 1px solid var(--line); border-radius: 10px; padding: 14px 12px; text-align: center; }
+.status-card .lbl { font-size: 11px; font-weight: 600; color: var(--ink-soft); text-transform: uppercase; letter-spacing: 0.4px; margin-bottom: 4px; }
+.status-card .val { font-family: 'IBM Plex Mono', monospace; font-size: 26px; font-weight: 600; line-height: 1.1; }
+.status-card.bot      { border-top: 4px solid var(--red); } .status-card.bot .val { color: var(--red); }
+.status-card.beh      { border-top: 4px solid var(--orange); } .status-card.beh .val { color: var(--orange); }
+.status-card.ok       { border-top: 4px solid var(--green-mid); } .status-card.ok .val  { color: var(--green-dark); }
+.status-card.over     { border-top: 4px solid var(--blue); } .status-card.over .val{ color: var(--blue); }
+.status-card.ns       { border-top: 4px solid var(--grey); } .status-card.ns .val  { color: var(--grey); }
+.status-card.unp      { border-top: 4px solid var(--blue); } .status-card.unp .val { color: var(--blue); }
 
-/* Summary KPI panel */
-.summary-panel {
-  background: white;
-  border: 1px solid var(--line);
-  border-radius: 12px;
-  padding: 20px;
-  margin-bottom: 20px;
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 20px;
-}
-.kpi-block .lbl {
-  font-size: 12px;
-  font-weight: 600;
-  color: var(--ink-soft);
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
-  margin-bottom: 6px;
-}
-.kpi-block .val {
-  font-family: 'IBM Plex Mono', monospace;
-  font-size: 32px;
-  font-weight: 600;
-  color: var(--green-dark);
-  line-height: 1;
-}
+.summary-panel { background: white; border: 1px solid var(--line); border-radius: 12px; padding: 20px; margin-bottom: 20px; display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
+.kpi-block .lbl { font-size: 12px; font-weight: 600; color: var(--ink-soft); text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 6px; }
+.kpi-block .val { font-family: 'IBM Plex Mono', monospace; font-size: 32px; font-weight: 600; color: var(--green-dark); line-height: 1; }
 .kpi-block .unit { font-size: 14px; color: var(--ink-soft); margin-left: 4px; font-family: 'IBM Plex Sans Thai'; }
 .kpi-block .sub { font-size: 11px; color: var(--ink-soft); margin-top: 4px; }
-.kpi-block.warn .val { color: var(--red); }
-.kpi-block.attn .val { color: var(--orange); }
+.kpi-block.warn .val { color: var(--red); } .kpi-block.attn .val { color: var(--orange); }
 
-/* Watch cards */
 .watch-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
-.watch-card {
-  background: white;
-  border: 1px solid var(--line);
-  border-left: 4px solid var(--orange);
-  border-radius: 10px;
-  padding: 14px 16px;
-}
-.watch-card .ttl {
-  font-weight: 600;
-  font-size: 14px;
-  margin-bottom: 4px;
-  color: var(--ink);
-}
-.watch-card .op {
-  color: var(--orange);
-  font-weight: 600;
-  font-size: 13px;
-  margin-bottom: 6px;
-}
+.watch-card { background: white; border: 1px solid var(--line); border-left: 4px solid var(--orange); border-radius: 10px; padding: 14px 16px; }
+.watch-card .ttl { font-weight: 600; font-size: 14px; margin-bottom: 4px; color: var(--ink); }
+.watch-card .op { color: var(--orange); font-weight: 600; font-size: 13px; margin-bottom: 6px; font-family: 'IBM Plex Mono', monospace; }
 .watch-card .meta { font-size: 12px; color: var(--ink-soft); }
 .watch-card .meta b { color: var(--ink); font-weight: 600; }
 
-/* Bottleneck cards */
-.bot-card {
-  background: white;
-  border: 1px solid var(--line);
-  border-left: 4px solid var(--red);
-  border-radius: 10px;
-  padding: 14px 16px;
-  margin-bottom: 10px;
-  display: grid;
-  grid-template-columns: 1fr auto;
-  gap: 14px;
-  align-items: center;
-}
+.bot-card { background: white; border: 1px solid var(--line); border-left: 4px solid var(--red); border-radius: 10px; padding: 14px 16px; margin-bottom: 10px; display: grid; grid-template-columns: 1fr auto; gap: 14px; align-items: center; }
 .bot-card .info .ttl { font-weight: 600; font-size: 14px; }
 .bot-card .info .prod { font-size: 12px; color: var(--ink-soft); margin-top: 2px; }
 .bot-card .info .meta { font-size: 12px; color: var(--ink-soft); margin-top: 6px; }
-.bot-card .pct {
-  font-family: 'IBM Plex Mono', monospace;
-  font-size: 32px;
-  font-weight: 700;
-  color: var(--red);
-  text-align: right;
-}
+.bot-card .pct { font-family: 'IBM Plex Mono', monospace; font-size: 32px; font-weight: 700; color: var(--red); text-align: right; }
 .bot-card .pct .small { font-size: 14px; display: block; color: var(--ink-soft); font-weight: 400; }
 
-/* Legend */
-.legend {
-  display: flex;
-  gap: 16px;
-  flex-wrap: wrap;
-  margin-bottom: 12px;
-  font-size: 12px;
-  color: var(--ink-soft);
-}
-.legend span b { font-weight: 600; }
+.legend { display: flex; gap: 16px; flex-wrap: wrap; margin-bottom: 12px; font-size: 12px; color: var(--ink-soft); }
 
-/* Tables */
-table {
-  width: 100%;
-  border-collapse: collapse;
-  background: white;
-  border-radius: 10px;
-  overflow: hidden;
-  box-shadow: 0 1px 2px rgba(0,0,0,0.04);
-  font-size: 13px;
-}
-th {
-  background: var(--green-dark);
-  color: white;
-  padding: 10px 12px;
-  text-align: left;
-  font-weight: 600;
-  font-size: 12px;
-  letter-spacing: 0.3px;
-  white-space: nowrap;
-}
-td {
-  padding: 9px 12px;
-  border-top: 1px solid var(--line);
-  vertical-align: top;
-}
+table { width: 100%; border-collapse: collapse; background: white; border-radius: 10px; overflow: hidden; box-shadow: 0 1px 2px rgba(0,0,0,0.04); font-size: 13px; }
+th { background: var(--green-dark); color: white; padding: 10px 12px; text-align: left; font-weight: 600; font-size: 12px; letter-spacing: 0.3px; white-space: nowrap; }
+td { padding: 9px 12px; border-top: 1px solid var(--line); vertical-align: top; }
 tr:hover td { background: var(--green-bg); }
 .num { font-family: 'IBM Plex Mono', monospace; text-align: right; white-space: nowrap; }
 
@@ -238,14 +77,7 @@ tr.row-OverProduction td { background: var(--blue-bg); }
 tr.row-NotStarted     td { color: var(--ink-soft); }
 tr.row-Unplanned      td { background: #EFF6FF; }
 
-.pill {
-  display: inline-block;
-  padding: 2px 9px;
-  border-radius: 999px;
-  font-size: 11px;
-  font-weight: 600;
-  white-space: nowrap;
-}
+.pill { display: inline-block; padding: 2px 9px; border-radius: 999px; font-size: 11px; font-weight: 600; white-space: nowrap; }
 .pill.Bottleneck     { background: var(--red-bg);    color: #7F1D1D; }
 .pill.Behind         { background: var(--orange-bg); color: #9A3412; }
 .pill.OnTarget       { background: var(--green-bg);  color: var(--green-dark); }
@@ -255,49 +87,20 @@ tr.row-Unplanned      td { background: #EFF6FF; }
 .pill.NoTarget       { background: var(--grey-bg);   color: #374151; }
 
 .bd-cell { font-family: 'IBM Plex Mono', monospace; font-weight: 600; text-align: right; }
-.bd-cell.high { color: var(--red); }
-.bd-cell.med  { color: var(--orange); }
-
+.bd-cell.high { color: var(--red); } .bd-cell.med { color: var(--orange); }
 .ach-cell { font-family: 'IBM Plex Mono', monospace; font-weight: 600; text-align: right; }
-.ach-cell.ok  { color: var(--green-dark); }
-.ach-cell.med { color: var(--orange); }
-.ach-cell.bad { color: var(--red); }
-.ach-cell.over{ color: var(--blue); }
+.ach-cell.ok { color: var(--green-dark); } .ach-cell.med { color: var(--orange); }
+.ach-cell.bad { color: var(--red); } .ach-cell.over { color: var(--blue); }
 
-/* Filter chips */
 .chips { display: flex; gap: 8px; margin-bottom: 12px; flex-wrap: wrap; }
-.chip {
-  background: white;
-  border: 1px solid var(--line);
-  padding: 6px 14px;
-  border-radius: 999px;
-  font-size: 12px;
-  font-weight: 500;
-  cursor: pointer;
-  transition: all 0.15s;
-}
+.chip { background: white; border: 1px solid var(--line); padding: 6px 14px; border-radius: 999px; font-size: 12px; font-weight: 500; cursor: pointer; transition: all 0.15s; }
 .chip:hover { border-color: var(--green-mid); }
 .chip.active { background: var(--green-dark); color: white; border-color: var(--green-dark); }
 
 .bd-reasons { font-size: 11px; color: var(--ink-soft); max-width: 320px; white-space: normal; line-height: 1.4; }
+.empty-state { background: white; border: 1px dashed var(--line); border-radius: 10px; padding: 24px; text-align: center; color: var(--ink-soft); }
 
-.empty-state {
-  background: white;
-  border: 1px dashed var(--line);
-  border-radius: 10px;
-  padding: 24px;
-  text-align: center;
-  color: var(--ink-soft);
-}
-
-footer {
-  margin-top: 40px;
-  padding-top: 16px;
-  border-top: 1px solid var(--line);
-  color: var(--ink-soft);
-  font-size: 12px;
-  text-align: center;
-}
+footer { margin-top: 40px; padding-top: 16px; border-top: 1px solid var(--line); color: var(--ink-soft); font-size: 12px; text-align: center; }
 footer b { color: var(--green-dark); }
 
 .scroll-wrap { overflow-x: auto; border-radius: 10px; }
@@ -307,147 +110,108 @@ footer b { color: var(--green-dark); }
 
 <div class="hdr">
   <h1>ZIGA — รายงานการผลิตประจำวัน</h1>
-  <div class="sub">วันที่ <b>14 พฤษภาคม 2569</b> · ผู้รับ: <b>ผู้จัดการฝ่ายผลิต</b> · Steel for Better Life</div>
+  <div class="sub">วันที่ <b>15 พฤษภาคม 2569</b> · ผู้รับ: <b>ผู้จัดการฝ่ายผลิต</b> · Steel for Better Life</div>
   <div class="meta">สร้างเมื่อ <span id="gen-time"></span> · แหล่งข้อมูล: SharePoint Lists</div>
 </div>
 
-<!-- ============ Section 1: สรุปสถานการณ์ ============ -->
 <div class="section">
   <h2>📋 สรุปสถานการณ์ประจำวัน</h2>
-
   <div class="summary-panel">
     <div class="kpi-block">
       <div class="lbl">งานในแผน</div>
-      <div class="val">36<span class="unit">jobs</span></div>
-      <div class="sub">ผลิตจริง 15 jobs · ค้าง 24 jobs</div>
+      <div class="val">37<span class="unit">jobs</span></div>
+      <div class="sub">ผลิตจริง 15 jobs · ค้าง 26 jobs</div>
     </div>
     <div class="kpi-block">
       <div class="lbl">ยอดผลิตวันนี้</div>
-      <div class="val">29,521</div>
-      <div class="sub">จากเป้า 592,685 เส้น/ตัว</div>
+      <div class="val">32,717</div>
+      <div class="sub">จากเป้า 510,911 เส้น/ตัว</div>
     </div>
     <div class="kpi-block warn">
       <div class="lbl">Overall Achievement</div>
-      <div class="val">5.0%</div>
-      <div class="sub">เฉพาะที่เริ่มแล้ว: 13.0%</div>
+      <div class="val">6.4%</div>
+      <div class="sub">เฉพาะที่เริ่มแล้ว: 24.7%</div>
     </div>
     <div class="kpi-block attn">
       <div class="lbl">Total Breakdown</div>
-      <div class="val">750<span class="unit">นาที</span></div>
-      <div class="sub">≈ 12.5 ชั่วโมง</div>
+      <div class="val">890<span class="unit">นาที</span></div>
+      <div class="sub">≈ 14.8 ชั่วโมง</div>
     </div>
   </div>
-
   <div class="status-grid">
     <div class="status-card bot"><div class="lbl">🔴 Bottleneck</div><div class="val">9</div></div>
-    <div class="status-card beh"><div class="lbl">🟠 Behind</div><div class="val">2</div></div>
+    <div class="status-card beh"><div class="lbl">🟠 Behind</div><div class="val">1</div></div>
     <div class="status-card ok"><div class="lbl">🟢 OnTarget</div><div class="val">1</div></div>
     <div class="status-card over"><div class="lbl">🔵 Over</div><div class="val">0</div></div>
-    <div class="status-card ns"><div class="lbl">⬜ NotStarted</div><div class="val">24</div></div>
-    <div class="status-card unp"><div class="lbl">🔵 Unplanned</div><div class="val">3</div></div>
-    <div class="status-card ok"><div class="lbl">Total Jobs</div><div class="val">39</div></div>
+    <div class="status-card ns"><div class="lbl">⬜ NotStarted</div><div class="val">26</div></div>
+    <div class="status-card unp"><div class="lbl">🔵 Unplanned</div><div class="val">4</div></div>
+    <div class="status-card ok"><div class="lbl">Total Jobs</div><div class="val">41</div></div>
   </div>
 </div>
 
-<!-- ============ Section 2: พนักงานที่ยังไม่กรอกรายงาน ============ -->
 <div class="section">
   <h2>⚠️ ใบงานที่ยังไม่กรอกรายงาน — ต้องติดตามด่วน</h2>
   <div class="watch-grid" id="unfilled-cards"></div>
 </div>
 
-<!-- ============ Section 3: งานตกเป้า ============ -->
 <div class="section">
   <h2>🚨 งานที่ตกเป้า (&lt; 70%)</h2>
   <div id="bottleneck-list"></div>
 </div>
 
-<!-- ============ Section 4: แผน vs จริง รายละเอียดทุก Job ============ -->
 <div class="section">
   <h2>📊 แผน vs จริง — รายละเอียดทุก Job</h2>
   <div class="legend">
-    <span>🟢 ได้เป้า ≥90%</span>
-    <span>🟠 ใกล้เป้า 70-89%</span>
-    <span>🔴 ตกเป้า &lt;70%</span>
-    <span>🔵 เกินเป้า &gt;110%</span>
-    <span>⬜ ยังไม่บันทึก</span>
+    <span>🟢 ได้เป้า ≥90%</span><span>🟠 ใกล้เป้า 70-89%</span><span>🔴 ตกเป้า &lt;70%</span><span>🔵 เกินเป้า &gt;110%</span><span>⬜ ยังไม่บันทึก</span>
   </div>
   <div class="chips" id="chips">
-    <span class="chip active" data-filter="all">ทั้งหมด (39)</span>
+    <span class="chip active" data-filter="all">ทั้งหมด</span>
     <span class="chip" data-filter="Bottleneck">🔴 Bottleneck (9)</span>
-    <span class="chip" data-filter="Behind">🟠 Behind (2)</span>
+    <span class="chip" data-filter="Behind">🟠 Behind (1)</span>
     <span class="chip" data-filter="OnTarget">🟢 OnTarget (1)</span>
-    <span class="chip" data-filter="NotStarted">⬜ NotStarted (24)</span>
-    <span class="chip" data-filter="Unplanned">🔵 Unplanned (3)</span>
+    <span class="chip" data-filter="NotStarted">⬜ NotStarted (26)</span>
+    <span class="chip" data-filter="Unplanned">🔵 Unplanned (4)</span>
   </div>
   <div class="scroll-wrap">
     <table id="job-table">
-      <thead>
-        <tr>
-          <th>Loc</th>
-          <th>Machine</th>
-          <th>Job</th>
-          <th>Product</th>
-          <th class="num">เป้า</th>
-          <th class="num">จริง</th>
-          <th class="num">%</th>
-          <th class="num">BD</th>
-          <th class="num">OEE</th>
-          <th>Status</th>
-          <th>Operator</th>
-        </tr>
-      </thead>
+      <thead><tr><th>Loc</th><th>Machine</th><th>Job</th><th>Product</th><th class="num">เป้า</th><th class="num">จริง</th><th class="num">%</th><th class="num">BD</th><th class="num">OEE</th><th>Status</th><th>Operator</th></tr></thead>
       <tbody id="job-tbody"></tbody>
     </table>
   </div>
 </div>
 
-<!-- ============ Section 5: Breakdown Analysis ============ -->
 <div class="section">
   <h2>⚠️ Breakdown Analysis</h2>
   <div class="scroll-wrap">
     <table>
-      <thead>
-        <tr>
-          <th>Machine</th>
-          <th>Job</th>
-          <th>Operator</th>
-          <th class="num">BD (min)</th>
-          <th>สาเหตุ</th>
-        </tr>
-      </thead>
+      <thead><tr><th>Machine</th><th>Job</th><th>Operator</th><th class="num">BD (min)</th><th>สาเหตุ</th></tr></thead>
       <tbody id="bd-tbody"></tbody>
     </table>
   </div>
 </div>
 
-<footer>
-  <b>ZIGA Innovation PCL</b> · <b>Production Control Dashboard</b> · Powered by Microsoft 365
-</footer>
+<footer><b>ZIGA Innovation PCL</b> · <b>Production Control Dashboard</b> · Powered by Microsoft 365</footer>
 
 <script>
-const DATA = {"kpis": {"date": "14/05/2026", "date_iso": "2026-05-14", "date_th": "14 พฤษภาคม 2569", "plan_jobs": 36, "actual_jobs": 15, "qty_plan_total": 592685, "qty_actual_total": 29521, "overall_ach_all": 5.0, "overall_ach_started": 13.0, "total_bd": 750, "bottleneck_n": 9, "behind_n": 2, "ontarget_n": 1, "over_n": 0, "notstarted_n": 24, "unplanned_n": 3}, "records": [{"Source": "Planned", "Location": "8C", "MachineNo": "CH_A05 (B12)", "JobNo": "OFM26-00274", "ProductName": "ท่อร้อยสายไฟDAIWA- RSC 1/2นิ้ว-Zero Spangle", "Size": "1/2\"", "Thickness": 2.3, "PlanStart": "14/05/2026 16:00", "PlanEnd": "14/05/2026 20:00", "PlannedMin": 240.0, "SetUpMin": 120.0, "TotalWorkMin": 120.0, "QtyPlan": 1650.0, "CapPerMin": 14.0, "PlanOperator": "นายนาราภัทร สายจันดี", "ActualOperator": "Narapat Saichandee", "QtyActual": 500.0, "BD_min": 120.0, "BD_reasons": "[17.30-18.00] 17:30-19:30 SET UP เปลี่ยนแค้มป์ ปรับองศามีด ปรับชิ้นงาน AB", "Achievement_pct": 30.3, "Availability_pct": 0.0, "Performance_pct": null, "OEE_pct": null, "Status": "Bottleneck"}, {"Source": "Planned", "Location": "8C", "MachineNo": "RF_07", "JobNo": "OFM26-00298", "ProductName": "ท่อร้อยสายไฟDAIWA- IMC HDG 1/2นิ้ว", "Size": "1/2\"", "Thickness": 1.6, "PlanStart": "14/05/2026 08:00", "PlanEnd": "14/05/2026 17:00", "PlannedMin": 540.0, "SetUpMin": 60.0, "TotalWorkMin": 480.0, "QtyPlan": 10000.0, "CapPerMin": 16.7, "PlanOperator": "นายภูษิต บัวชุม,นายอุเทน กองสิงห์", "ActualOperator": "Phusit Buachum", "QtyActual": 600.0, "BD_min": 100.0, "BD_reasons": "[08.00-09.00] Setup 60นาที | [09.00-10.00] เปลี่ยนถ่านเชื่อม 40นาที", "Achievement_pct": 6.0, "Availability_pct": 79.2, "Performance_pct": 9.5, "OEE_pct": 7.5, "Status": "Bottleneck"}, {"Source": "Planned", "Location": "8F", "MachineNo": "TA_A05 (A14)", "JobNo": "OFM26-00126", "ProductName": "ท่อมอก.107เกลียวเหลืองS STK290-112.0(4\")x2.50x6ม.40.5kgZ80", "Size": "4\"", "Thickness": 2.5, "PlanStart": "14/05/2026 08:00", "PlanEnd": "14/05/2026 11:00", "PlannedMin": 180.0, "SetUpMin": 0.0, "TotalWorkMin": 180.0, "QtyPlan": 2000.0, "CapPerMin": 3.0, "PlanOperator": "นายวิชัย ด่านมะณี", "ActualOperator": "Wichai Danmanee", "QtyActual": 540.0, "BD_min": 70.0, "BD_reasons": "[08.00-09.00] เปลี่ยนมีด 20 นาที | [10.00-11.00] ช่วยช่าง set up a15 เวลาประมาณ 50 นาที | [main] เปลี่ยนมีด และช่วยช่าง set up a15", "Achievement_pct": 27.0, "Availability_pct": 61.1, "Performance_pct": 163.6, "OEE_pct": 100.0, "Status": "Bottleneck"}, {"Source": "Planned", "Location": "8B", "MachineNo": "SL_01", "JobNo": "OSE26-00141", "ProductName": "97.50 x 9, 182.00 x2, จับข้าง 4.5*4.0 -3.20(K450)", "Size": "", "Thickness": 3.2, "PlanStart": "14/05/2026 08:00", "PlanEnd": "14/05/2026 14:00", "PlannedMin": 360.0, "SetUpMin": 60.0, "TotalWorkMin": 300.0, "QtyPlan": 40000.0, "CapPerMin": 167.0, "PlanOperator": "นายเอกภพ ภู่ศรีพงษ์,นายสุภาพ เม่นแก้ว,นายสามารถ ดาสม", "ActualOperator": "Aekkaphob Phusriphong", "QtyActual": 4.0, "BD_min": 60.0, "BD_reasons": "[main] เครื่องเสียสายไฮดรอลิคแตก", "Achievement_pct": 0.0, "Availability_pct": 80.0, "Performance_pct": 0.0, "OEE_pct": 0.0, "Status": "Bottleneck"}, {"Source": "Planned", "Location": "8C", "MachineNo": "RF_06", "JobNo": "OFM26-00223", "ProductName": "ท่อร้อยสายไฟDAIWA- EMT HDG 1/2นิ้ว-S01 (2P)", "Size": "1/2\"", "Thickness": 0.9, "PlanStart": "14/05/2026 08:00", "PlanEnd": "14/05/2026 15:00", "PlannedMin": 420.0, "SetUpMin": 0.0, "TotalWorkMin": 420.0, "QtyPlan": 80000.0, "CapPerMin": 18.33, "PlanOperator": "นายสุรเชษฐ์ สุดศิลา,นายสงวน สุดแก้ว", "ActualOperator": "Surachest Sudsila", "QtyActual": 6836.0, "BD_min": 55.0, "BD_reasons": "[08.00-09.00] PM=15นาที | [14.00-15.00] แก้ไขเหล็กสลีทไส้แตก=40นาที | [15.00-16.00] 15.20จบรายการผลิต | [main] เหล็กสลีทไส้แตกบนunciler", "Achievement_pct": 8.5, "Availability_pct": 86.9, "Performance_pct": 102.2, "OEE_pct": 88.8, "Status": "Bottleneck"}, {"Source": "Planned", "Location": "8C", "MachineNo": "TA_A04 (A12)", "JobNo": "OFM26-00272", "ProductName": "ท่อร้อยสายไฟDAIWA- IMC HDG 1-1/2นิ้ว", "Size": "1-1/2\"", "Thickness": 1.95, "PlanStart": "14/05/2026 08:00", "PlanEnd": "14/05/2026 16:00", "PlannedMin": 480.0, "SetUpMin": 0.0, "TotalWorkMin": 480.0, "QtyPlan": 3600.0, "CapPerMin": 6.0, "PlanOperator": "นายนาราภัทร สายจันดี", "ActualOperator": "Narapat Saichandee", "QtyActual": 1350.0, "BD_min": 40.0, "BD_reasons": "[09.00-10.00] 09:00-09:40 ลับคมมีดเปลี่ยนมีด +ปรับชิ้นงานหัวB", "Achievement_pct": 37.5, "Availability_pct": 91.7, "Performance_pct": 51.1, "OEE_pct": 46.9, "Status": "Bottleneck"}, {"Source": "Planned", "Location": "8C", "MachineNo": "CH_A06 (B14)", "JobNo": "OFM26-00223", "ProductName": "ท่อร้อยสายไฟDAIWA- EMT HDG 1/2นิ้ว-S01 (2P)", "Size": "1/2\"", "Thickness": 0.9, "PlanStart": "14/05/2026 08:00", "PlanEnd": "14/05/2026 20:00", "PlannedMin": 720.0, "SetUpMin": 0.0, "TotalWorkMin": 720.0, "QtyPlan": 80000.0, "CapPerMin": 25.0, "PlanOperator": "นายกิตติพร เกษประเสริฐ", "ActualOperator": "Kittiporn Kesprasert", "QtyActual": 12000.0, "BD_min": 0.0, "BD_reasons": "", "Achievement_pct": 15.0, "Availability_pct": 100.0, "Performance_pct": 66.7, "OEE_pct": 66.7, "Status": "Bottleneck"}, {"Source": "Planned", "Location": "งานเครื่องข้อต่อ", "MachineNo": "CU_BL02(AMADA เล็ก)", "JobNo": "ORW26-00090", "ProductName": "ข้อต่อท่อร้อยสายไฟ HDG 2นิ้ว-HDG", "Size": "2\"", "Thickness": 4.0, "PlanStart": "14/05/2026 08:00", "PlanEnd": "14/05/2026 20:00", "PlannedMin": 720.0, "SetUpMin": 0.0, "TotalWorkMin": 720.0, "QtyPlan": 2200.0, "CapPerMin": 1.0, "PlanOperator": "นายวิทัต วุฒิวิมล", "ActualOperator": "Vitas Vutivimon", "QtyActual": 640.0, "BD_min": 0.0, "BD_reasons": "[19.00-20.00] 640ตัว", "Achievement_pct": 29.1, "Availability_pct": 100.0, "Performance_pct": 88.9, "OEE_pct": 88.9, "Status": "Bottleneck"}, {"Source": "Planned", "Location": "งานเครื่องข้อต่อ", "MachineNo": "ข้อต่อ-อัด", "JobNo": "ORW26-00090", "ProductName": "ข้อต่อท่อร้อยสายไฟ HDG 2นิ้ว-HDG", "Size": "2\"", "Thickness": 4.0, "PlanStart": "14/05/2026 13:00", "PlanEnd": "14/05/2026 20:00", "PlannedMin": 420.0, "SetUpMin": 30.0, "TotalWorkMin": 390.0, "QtyPlan": 2200.0, "CapPerMin": 4.0, "PlanOperator": "นายวิทัต วุฒิวิมล", "ActualOperator": "Vitas Vutivimon", "QtyActual": 630.0, "BD_min": 0.0, "BD_reasons": "[17.30-18.00] อัด1รอบ | [19.00-20.00] 210ตัว | [16.00-17.00] 420 | [main] แก้ไขเครื่องตัด เปลี่ยนใบเลื่อย ขึ้นท่อตัด", "Achievement_pct": 28.6, "Availability_pct": 100.0, "Performance_pct": 40.4, "OEE_pct": 40.4, "Status": "Bottleneck"}, {"Source": "Planned", "Location": "2", "MachineNo": "RF_04", "JobNo": "OFM26-00189", "ProductName": "ท่อ HZO 4\"(100) มอก.276 -2562เกลียวหนา 4.5 มม.66.0+/-กก.Zero", "Size": "4\"", "Thickness": 4.0, "PlanStart": "14/05/2026 13:00", "PlanEnd": "14/05/2026 20:00", "PlannedMin": 420.0, "SetUpMin": 60.0, "TotalWorkMin": 360.0, "QtyPlan": 800.0, "CapPerMin": 2.5, "PlanOperator": "นายภูมินทร์ มั่นศักดิ์,นายสงบ การบรรจง", "ActualOperator": "Poomin Mansak", "QtyActual": 630.0, "BD_min": 160.0, "BD_reasons": "[13.00-14.00] เปลี่ยนความหนาปรับ OD น.ท | [16.00-17.00] แก้ไขรอยต่อขาดในจาน เก็บเหล็ก  60 น.ท | [19.00-20.00] ลูกปืน SQ แตก เก็บของเสีย  40  น.ท", "Achievement_pct": 78.8, "Availability_pct": 55.6, "Performance_pct": 126.0, "OEE_pct": 70.1, "Status": "Behind"}, {"Source": "Planned", "Location": "8D", "MachineNo": "CH_A03 (B10)", "JobNo": "OFM26-00261", "ProductName": "ZIGA มอก.107 แดงเรียบ 1/2\" หนา1.3 มม. สกรีน 1.4 มม. 3.6+/-", "Size": "1/2\"", "Thickness": 1.3, "PlanStart": "14/05/2026 08:00", "PlanEnd": "14/05/2026 10:30", "PlannedMin": 150.0, "SetUpMin": 0.0, "TotalWorkMin": 150.0, "QtyPlan": 5000.0, "CapPerMin": 25.0, "PlanOperator": "นายศิวะกรณ์ สุขเจริญ", "ActualOperator": "Siwakorn Sukcharoen", "QtyActual": 4000.0, "BD_min": 80.0, "BD_reasons": "[09.00-10.00] 60นาทีท่อขึ้นขอบเป็นตอข้างในตั้งมีดใหม่ | [11.00-12.00] 20นาทีเปลี่ยนใบมีดA,Bทั้งหมด | [12.00-13.00] พัก | [16.00-17.00] 16:10จบงาน", "Achievement_pct": 80.0, "Availability_pct": 46.7, "Performance_pct": 228.6, "OEE_pct": 106.8, "Status": "Behind"}, {"Source": "Planned", "Location": "8C", "MachineNo": "RF_06", "JobNo": "OFM26-00267", "ProductName": "ท่อร้อยสายไฟDAIWA- EMT HDG 3/4นิ้ว D", "Size": "3/4\"", "Thickness": 1.1, "PlanStart": "14/05/2026 15:00", "PlanEnd": "14/05/2026 17:00", "PlannedMin": 120.0, "SetUpMin": 105.0, "TotalWorkMin": 15.0, "QtyPlan": 50000.0, "CapPerMin": 16.7, "PlanOperator": "นายสุรเชษฐ์ สุดศิลา,นายสงวน สุดแก้ว", "ActualOperator": "Surachest Sudsila", "QtyActual": 0.0, "BD_min": 15.0, "BD_reasons": "[15.00-16.00] 15.20 เริ่มSETUP | [18.00-19.00] 5ส=15นาที | [main] 5ส", "Achievement_pct": 0.0, "Availability_pct": 0.0, "Performance_pct": null, "OEE_pct": null, "Status": "NotStarted"}, {"Source": "PlannedNoActual", "Location": "8E", "MachineNo": null, "JobNo": "OFM26-00282", "ProductName": "ZIGA มอก.107 น้ำเงินเกลียว 2\" หนา1.95 สกรีน 2.1 มม.16.5+/-", "Size": "2\"", "Thickness": 1.95, "PlanStart": "14/05/2026 08:00", "PlanEnd": "14/05/2026 12:00", "PlannedMin": 240.0, "SetUpMin": 240.0, "TotalWorkMin": 0.0, "QtyPlan": 2100.0, "CapPerMin": 0.0, "PlanOperator": "นายประสาท แก้วนันทะ,นายเปรมชัย รุ่งอินทร์", "ActualOperator": "", "QtyActual": 0.0, "BD_min": 0.0, "BD_reasons": "", "Achievement_pct": 0.0, "Availability_pct": null, "Performance_pct": null, "OEE_pct": null, "Status": "NotStarted"}, {"Source": "PlannedNoActual", "Location": "2", "MachineNo": "BE_M01 (เครื่องดัดโค้ง- size 1/2\"-3/4\")", "JobNo": "Memo69/001", "ProductName": "งาน re pack ติดsticker Homepro", "Size": "", "Thickness": "", "PlanStart": "14/05/2026 00:00", "PlanEnd": null, "PlannedMin": 0.0, "SetUpMin": 0.0, "TotalWorkMin": 0.0, "QtyPlan": 0.0, "CapPerMin": 0.0, "PlanOperator": "[]", "ActualOperator": "", "QtyActual": 0.0, "BD_min": 0.0, "BD_reasons": "", "Achievement_pct": null, "Availability_pct": null, "Performance_pct": null, "OEE_pct": null, "Status": "NotStarted"}, {"Source": "PlannedNoActual", "Location": "งานเครื่องโค้ง", "MachineNo": "BE_M03 (เครื่องดัดโค้ง- size 1-1/2\" - 2\")", "JobNo": "ORW26-00081", "ProductName": "ท่อโค้ง90' IMC-HDG 1-1/2นิ้ว", "Size": "1-1/2\"", "Thickness": "", "PlanStart": "14/05/2026 17:30", "PlanEnd": "14/05/2026 20:00", "PlannedMin": 150.0, "SetUpMin": 0.0, "TotalWorkMin": 150.0, "QtyPlan": 220.0, "CapPerMin": 0.3, "PlanOperator": "นายสามารถ ดาสม", "ActualOperator": "", "QtyActual": 0.0, "BD_min": 0.0, "BD_reasons": "", "Achievement_pct": 0.0, "Availability_pct": 100.0, "Performance_pct": 0.0, "OEE_pct": 0.0, "Status": "NotStarted"}, {"Source": "PlannedNoActual", "Location": "งานเครื่องโค้ง", "MachineNo": "BE_M03 (เครื่องดัดโค้ง- size 1-1/2\" - 2\")", "JobNo": "ORW26-00105", "ProductName": "ท่อโค้ง90' IMC-HDG 2นิ้ว", "Size": "2\"", "Thickness": "", "PlanStart": "14/05/2026 17:30", "PlanEnd": "14/05/2026 20:00", "PlannedMin": 150.0, "SetUpMin": 0.0, "TotalWorkMin": 150.0, "QtyPlan": 500.0, "CapPerMin": 0.3, "PlanOperator": "นายสุภาพ เม่นแก้ว", "ActualOperator": "", "QtyActual": 0.0, "BD_min": 0.0, "BD_reasons": "", "Achievement_pct": 0.0, "Availability_pct": 100.0, "Performance_pct": 0.0, "OEE_pct": 0.0, "Status": "NotStarted"}, {"Source": "PlannedNoActual", "Location": "งานเครื่องโค้ง", "MachineNo": "BE_M05 (เครื่องดัดโค้ง- size 3\" - 5\" )", "JobNo": "ORW26-00084", "ProductName": "ท่อโค้ง90' RSC 4 นิ้ว", "Size": "4\"", "Thickness": "", "PlanStart": "14/05/2026 08:00", "PlanEnd": "14/05/2026 17:00", "PlannedMin": 540.0, "SetUpMin": 0.0, "TotalWorkMin": 540.0, "QtyPlan": 100.0, "CapPerMin": 0.2, "PlanOperator": "นายมนตรี รักเสมอวงค์", "ActualOperator": "", "QtyActual": 0.0, "BD_min": 0.0, "BD_reasons": "", "Achievement_pct": 0.0, "Availability_pct": 100.0, "Performance_pct": 0.0, "OEE_pct": 0.0, "Status": "NotStarted"}, {"Source": "PlannedNoActual", "Location": "8C", "MachineNo": "CH_A05 (B12)", "JobNo": "OFM26-00298", "ProductName": "ท่อร้อยสายไฟDAIWA- IMC HDG 1/2นิ้ว", "Size": "1/2\"", "Thickness": 1.6, "PlanStart": "14/05/2026 14:30", "PlanEnd": "14/05/2026 20:00", "PlannedMin": 330.0, "SetUpMin": 30.0, "TotalWorkMin": 300.0, "QtyPlan": 10000.0, "CapPerMin": 14.0, "PlanOperator": "นายศิวะกรณ์ สุขเจริญ", "ActualOperator": "", "QtyActual": 0.0, "BD_min": 0.0, "BD_reasons": "", "Achievement_pct": 0.0, "Availability_pct": 100.0, "Performance_pct": 0.0, "OEE_pct": 0.0, "Status": "NotStarted"}, {"Source": "PlannedNoActual", "Location": "งานเครื่องโค้ง", "MachineNo": "CH_ELBOW01 (เครื่องลบคมท่อโค้ง)", "JobNo": "ORW26-00105", "ProductName": "ท่อโค้ง90' IMC-HDG 2นิ้ว", "Size": "2\"", "Thickness": "", "PlanStart": "14/05/2026 08:00", "PlanEnd": "14/05/2026 20:00", "PlannedMin": 720.0, "SetUpMin": 0.0, "TotalWorkMin": 720.0, "QtyPlan": 500.0, "CapPerMin": 0.5, "PlanOperator": "out source", "ActualOperator": "", "QtyActual": 0.0, "BD_min": 0.0, "BD_reasons": "", "Achievement_pct": 0.0, "Availability_pct": 100.0, "Performance_pct": 0.0, "OEE_pct": 0.0, "Status": "NotStarted"}, {"Source": "PlannedNoActual", "Location": "งานเครื่องข้อต่อ", "MachineNo": "CU_BL01(AMADA ใหญ่)", "JobNo": "ORW26-00102", "ProductName": "ข้อต่อ 4\" รอส่งทำเกลียว", "Size": "", "Thickness": "", "PlanStart": "14/05/2026 08:00", "PlanEnd": "14/05/2026 20:00", "PlannedMin": 720.0, "SetUpMin": 0.0, "TotalWorkMin": 720.0, "QtyPlan": 4620.0, "CapPerMin": 0.5, "PlanOperator": "นายวิทัต วุฒิวิมล", "ActualOperator": "", "QtyActual": 0.0, "BD_min": 0.0, "BD_reasons": "", "Achievement_pct": 0.0, "Availability_pct": 100.0, "Performance_pct": 0.0, "OEE_pct": 0.0, "Status": "NotStarted"}, {"Source": "PlannedNoActual", "Location": "8C", "MachineNo": "LO_R04 (F4)", "JobNo": "OFM26-00223", "ProductName": "ท่อร้อยสายไฟDAIWA- EMT HDG 1/2นิ้ว-S01 (2P)", "Size": "1/2\"", "Thickness": 0.9, "PlanStart": "14/05/2026 18:00", "PlanEnd": "14/05/2026 20:00", "PlannedMin": 120.0, "SetUpMin": 30.0, "TotalWorkMin": 90.0, "QtyPlan": 80000.0, "CapPerMin": 17.78, "PlanOperator": "นายธัณพิสิฐ น้อมนุช", "ActualOperator": "", "QtyActual": 0.0, "BD_min": 0.0, "BD_reasons": "", "Achievement_pct": 0.0, "Availability_pct": 100.0, "Performance_pct": 0.0, "OEE_pct": 0.0, "Status": "NotStarted"}, {"Source": "PlannedNoActual", "Location": "8C", "MachineNo": "LO_R04 (F4)", "JobNo": "OFM26-00272", "ProductName": "ท่อร้อยสายไฟDAIWA- IMC HDG 1-1/2นิ้ว", "Size": "1-1/2\"", "Thickness": 1.95, "PlanStart": "14/05/2026 08:00", "PlanEnd": "14/05/2026 18:00", "PlannedMin": 600.0, "SetUpMin": 30.0, "TotalWorkMin": 570.0, "QtyPlan": 3600.0, "CapPerMin": 8.9, "PlanOperator": "นายธัณพิสิฐ น้อมนุช", "ActualOperator": "", "QtyActual": 0.0, "BD_min": 0.0, "BD_reasons": "", "Achievement_pct": 0.0, "Availability_pct": 100.0, "Performance_pct": 0.0, "OEE_pct": 0.0, "Status": "NotStarted"}, {"Source": "PlannedNoActual", "Location": "8D", "MachineNo": "LO_R06+PA_M06 (F6P6)", "JobNo": "OFM26-00262", "ProductName": "ZIGA มอก.107 เหลืองเกลียว 1/2\" หนา1.3  สกรีน 1.4 มม. 3.6+/-", "Size": "1/2\"", "Thickness": 1.3, "PlanStart": "14/05/2026 08:00", "PlanEnd": "14/05/2026 22:00", "PlannedMin": 840.0, "SetUpMin": 0.0, "TotalWorkMin": 840.0, "QtyPlan": 14000.0, "CapPerMin": 9.15, "PlanOperator": "out source", "ActualOperator": "", "QtyActual": 0.0, "BD_min": 0.0, "BD_reasons": "", "Achievement_pct": 0.0, "Availability_pct": 100.0, "Performance_pct": 0.0, "OEE_pct": 0.0, "Status": "NotStarted"}, {"Source": "PlannedNoActual", "Location": "8C", "MachineNo": "PA_EL01 (P4-ราง1)", "JobNo": "Memo69/002", "ProductName": "งาน re pack ติดsticker DOHOME", "Size": "", "Thickness": "", "PlanStart": "14/05/2026 13:00", "PlanEnd": "14/05/2026 17:00", "PlannedMin": 240.0, "SetUpMin": 0.0, "TotalWorkMin": 240.0, "QtyPlan": 0.0, "CapPerMin": 0.0, "PlanOperator": "out source", "ActualOperator": "", "QtyActual": 0.0, "BD_min": 0.0, "BD_reasons": "", "Achievement_pct": null, "Availability_pct": 100.0, "Performance_pct": null, "OEE_pct": null, "Status": "NotStarted"}, {"Source": "PlannedNoActual", "Location": "8C", "MachineNo": "PA_EL01 (P4-ราง1)", "JobNo": "OFM26-00161", "ProductName": "ท่อร้อยสายไฟDAIWA- RSC 2-1/2นิ้ว-Zero Spangle", "Size": "2-1/2\"", "Thickness": 4.0, "PlanStart": "14/05/2026 17:30", "PlanEnd": "14/05/2026 22:00", "PlannedMin": 270.0, "SetUpMin": 0.0, "TotalWorkMin": 270.0, "QtyPlan": 600.0, "CapPerMin": 0.43, "PlanOperator": "out source", "ActualOperator": "", "QtyActual": 0.0, "BD_min": 0.0, "BD_reasons": "", "Achievement_pct": 0.0, "Availability_pct": 100.0, "Performance_pct": 0.0, "OEE_pct": 0.0, "Status": "NotStarted"}, {"Source": "PlannedNoActual", "Location": "8C", "MachineNo": "PA_EL01 (P4-ราง1)", "JobNo": "OFM26-00250", "ProductName": "ท่อร้อยสายไฟDAIWA- IMC HDG 2-1/2นิ้ว-ข้ามเดือนจากOFM26-00071", "Size": "2-1/2\"", "Thickness": 2.8, "PlanStart": "14/05/2026 08:00", "PlanEnd": "14/05/2026 12:00", "PlannedMin": 240.0, "SetUpMin": 0.0, "TotalWorkMin": 240.0, "QtyPlan": 1265.0, "CapPerMin": 0.43, "PlanOperator": "out source", "ActualOperator": "", "QtyActual": 0.0, "BD_min": 0.0, "BD_reasons": "", "Achievement_pct": 0.0, "Availability_pct": 100.0, "Performance_pct": 0.0, "OEE_pct": 0.0, "Status": "NotStarted"}, {"Source": "PlannedNoActual", "Location": "8C", "MachineNo": "PA_EL02 (P4-ราง2)", "JobNo": "OFM26-00223", "ProductName": "ท่อร้อยสายไฟDAIWA- EMT HDG 1/2นิ้ว-S01 (2P)", "Size": "1/2\"", "Thickness": 0.9, "PlanStart": "14/05/2026 08:00", "PlanEnd": "14/05/2026 17:00", "PlannedMin": 540.0, "SetUpMin": 0.0, "TotalWorkMin": 540.0, "QtyPlan": 80000.0, "CapPerMin": 17.21, "PlanOperator": "out source", "ActualOperator": "", "QtyActual": 0.0, "BD_min": 0.0, "BD_reasons": "", "Achievement_pct": 0.0, "Availability_pct": 100.0, "Performance_pct": 0.0, "OEE_pct": 0.0, "Status": "NotStarted"}, {"Source": "PlannedNoActual", "Location": "8C", "MachineNo": "PA_EL02 (P4-ราง2)", "JobNo": "OFM26-00272", "ProductName": "ท่อร้อยสายไฟDAIWA- IMC HDG 1-1/2นิ้ว", "Size": "1-1/2\"", "Thickness": 1.95, "PlanStart": "14/05/2026 17:30", "PlanEnd": "14/05/2026 22:00", "PlannedMin": 270.0, "SetUpMin": 0.0, "TotalWorkMin": 270.0, "QtyPlan": 3600.0, "CapPerMin": 1.62, "PlanOperator": "out source", "ActualOperator": "", "QtyActual": 0.0, "BD_min": 0.0, "BD_reasons": "", "Achievement_pct": 0.0, "Availability_pct": 100.0, "Performance_pct": 0.0, "OEE_pct": 0.0, "Status": "NotStarted"}, {"Source": "PlannedNoActual", "Location": "8B", "MachineNo": "SL_02", "JobNo": "OSE26-00137", "ProductName": "55.80 x22 (OFM26-00266) , จับข้าง 11.20*11.20 -0.90", "Size": "", "Thickness": 0.9, "PlanStart": "14/05/2026 14:00", "PlanEnd": "14/05/2026 17:00", "PlannedMin": 180.0, "SetUpMin": 120.0, "TotalWorkMin": 60.0, "QtyPlan": 100000.0, "CapPerMin": 167.0, "PlanOperator": "นายเอกภพ ภู่ศรีพงษ์,นายสุภาพ เม่นแก้ว,นายสามารถ ดาสม", "ActualOperator": "", "QtyActual": 0.0, "BD_min": 0.0, "BD_reasons": "", "Achievement_pct": 0.0, "Availability_pct": 100.0, "Performance_pct": 0.0, "OEE_pct": 0.0, "Status": "NotStarted"}, {"Source": "PlannedNoActual", "Location": "8C", "MachineNo": "TA_A03 (A11)", "JobNo": "OFM26-00257", "ProductName": "ZIGA มอก.107 น้ำเงินเรียบ 1/2\" หนา1.90 มม.สกรีน 2.0 มม.5.3kg", "Size": "1/2\"", "Thickness": 1.9, "PlanStart": "14/05/2026 13:00", "PlanEnd": "14/05/2026 19:00", "PlannedMin": 360.0, "SetUpMin": 60.0, "TotalWorkMin": 300.0, "QtyPlan": 2100.0, "CapPerMin": 14.0, "PlanOperator": "นายศิวะกรณ์ สุขเจริญ", "ActualOperator": "", "QtyActual": 0.0, "BD_min": 0.0, "BD_reasons": "", "Achievement_pct": 0.0, "Availability_pct": 100.0, "Performance_pct": 0.0, "OEE_pct": 0.0, "Status": "NotStarted"}, {"Source": "PlannedNoActual", "Location": "8F", "MachineNo": "TA_A05 (A14)", "JobNo": "OFM26-00229", "ProductName": "ท่อ HZO2-1/2\"(65) มอก.276-2562 เกลียว รุ่น 3.6มม. 34.6+/-กก.", "Size": "2-1/2\"", "Thickness": 3.2, "PlanStart": "14/05/2026 11:00", "PlanEnd": "14/05/2026 20:00", "PlannedMin": 540.0, "SetUpMin": 120.0, "TotalWorkMin": 420.0, "QtyPlan": 500.0, "CapPerMin": 1.0, "PlanOperator": "นายวิชัย ด่านมะณี", "ActualOperator": "", "QtyActual": 0.0, "BD_min": 0.0, "BD_reasons": "", "Achievement_pct": 0.0, "Availability_pct": 100.0, "Performance_pct": 0.0, "OEE_pct": 0.0, "Status": "NotStarted"}, {"Source": "PlannedNoActual", "Location": "งานเครื่องโค้ง", "MachineNo": "TA_M_ELBOW_02 (ทำเกลียวท่อโค้ง)", "JobNo": "ORW26-00105", "ProductName": "ท่อโค้ง90' IMC-HDG 2นิ้ว", "Size": "2\"", "Thickness": "", "PlanStart": "14/05/2026 17:30", "PlanEnd": "14/05/2026 20:00", "PlannedMin": 150.0, "SetUpMin": 0.0, "TotalWorkMin": 150.0, "QtyPlan": 500.0, "CapPerMin": 0.8, "PlanOperator": "นายเอกภพ ภู่ศรีพงษ์", "ActualOperator": "", "QtyActual": 0.0, "BD_min": 0.0, "BD_reasons": "", "Achievement_pct": 0.0, "Availability_pct": 100.0, "Performance_pct": 0.0, "OEE_pct": 0.0, "Status": "NotStarted"}, {"Source": "PlannedNoActual", "Location": "งานเครื่องข้อต่อ", "MachineNo": "ข้อต่อ-ลบคม", "JobNo": "ORW26-00075", "ProductName": "ข้อต่อท่อร้อยสายไฟ HDG 1นิ้ว รุ่นSuper", "Size": "1\"", "Thickness": "", "PlanStart": "14/05/2026 08:00", "PlanEnd": "14/05/2026 12:00", "PlannedMin": 240.0, "SetUpMin": 0.0, "TotalWorkMin": 240.0, "QtyPlan": 7616.0, "CapPerMin": 4.0, "PlanOperator": "นายวิทัต วุฒิวิมล", "ActualOperator": "", "QtyActual": 0.0, "BD_min": 0.0, "BD_reasons": "", "Achievement_pct": 0.0, "Availability_pct": 100.0, "Performance_pct": 0.0, "OEE_pct": 0.0, "Status": "NotStarted"}, {"Source": "PlannedNoActual", "Location": "งานเครื่องข้อต่อ", "MachineNo": "ข้อต่อ-ล้าง", "JobNo": "ORW26-00074", "ProductName": "ข้อต่อท่อร้อยสายไฟ HDG 2นิ้ว(RSC Super)", "Size": "2\"", "Thickness": 4.0, "PlanStart": "14/05/2026 08:00", "PlanEnd": "14/05/2026 17:00", "PlannedMin": 540.0, "SetUpMin": 0.0, "TotalWorkMin": 540.0, "QtyPlan": 2200.0, "CapPerMin": 2.2, "PlanOperator": "นายรุ่งโรจน์ วามะลุน", "ActualOperator": "", "QtyActual": 0.0, "BD_min": 0.0, "BD_reasons": "", "Achievement_pct": 0.0, "Availability_pct": 100.0, "Performance_pct": 0.0, "OEE_pct": 0.0, "Status": "NotStarted"}, {"Source": "PlannedNoActual", "Location": "งานเครื่องข้อต่อ", "MachineNo": "ข้อต่อ-อัด", "JobNo": "ORW26-00072", "ProductName": "ข้อต่อ 4\" รอส่งทำเกลียว", "Size": "", "Thickness": "", "PlanStart": "14/05/2026 08:00", "PlanEnd": "14/05/2026 20:00", "PlannedMin": 720.0, "SetUpMin": 30.0, "TotalWorkMin": 690.0, "QtyPlan": 924.0, "CapPerMin": 1.0, "PlanOperator": "out source", "ActualOperator": "", "QtyActual": 0.0, "BD_min": 0.0, "BD_reasons": "", "Achievement_pct": 0.0, "Availability_pct": 100.0, "Performance_pct": 0.0, "OEE_pct": 0.0, "Status": "NotStarted"}, {"Source": "Planned", "Location": "2", "MachineNo": "RF_04", "JobNo": "OFM26-00222", "ProductName": "ท่อมอก.107-Zuper ZIGA น้ำเงินเรียบ 4\"x2.8(3.0) มม.46.0kg.", "Size": "4\"", "Thickness": 2.8, "PlanStart": "14/05/2026 08:00", "PlanEnd": "14/05/2026 13:00", "PlannedMin": 300.0, "SetUpMin": 180.0, "TotalWorkMin": 120.0, "QtyPlan": 290.0, "CapPerMin": 2.5, "PlanOperator": "นายภูมินทร์ มั่นศักดิ์,นายสงบ การบรรจง", "ActualOperator": "Poomin Mansak", "QtyActual": 265.0, "BD_min": 0.0, "BD_reasons": "[08.00-09.00] ประกอบโรล์ | [09.00-10.00] ประกอบโรล์ | [10.00-11.00] นำเหล็กเข้าเครื่องปรับโรล์ | [12.00-13.00] จบงาน", "Achievement_pct": 91.4, "Availability_pct": 100.0, "Performance_pct": 88.3, "OEE_pct": 88.3, "Status": "OnTarget"}, {"Source": "Unplanned", "Location": "ไม่ระบุ", "MachineNo": "TA_A03 (A11)", "JobNo": "Memo69/008", "ProductName": "เบิกท่อ ZIGA มอก.107 น้ำเงินเรียบ 1/2\" มาเกลียว แล้วย้ายรหัส", "Size": "", "Thickness": "", "PlanStart": null, "PlanEnd": null, "PlannedMin": 0.0, "SetUpMin": 0.0, "TotalWorkMin": 0.0, "QtyPlan": 0.0, "CapPerMin": 0.0, "PlanOperator": "", "ActualOperator": "Siwakorn Sukcharoen", "QtyActual": 1070.0, "BD_min": 50.0, "BD_reasons": "[16.00-17.00] 16:10เริ่มงาน50นาทีตั้งเครื่องปรับขาถีบใหม่ | [17.30-18.00] 30นาทีพัก", "Achievement_pct": null, "Availability_pct": null, "Performance_pct": null, "OEE_pct": null, "Status": "Unplanned"}, {"Source": "Unplanned", "Location": "ไม่ระบุ", "MachineNo": "CU_BL01(AMADA ใหญ่)", "JobNo": "ORW26-00093", "ProductName": "ข้อต่อ 4\" รอส่งทำเกลียว", "Size": "", "Thickness": "", "PlanStart": null, "PlanEnd": null, "PlannedMin": 0.0, "SetUpMin": 0.0, "TotalWorkMin": 0.0, "QtyPlan": 0.0, "CapPerMin": 0.0, "PlanOperator": "", "ActualOperator": "Vitas Vutivimon", "QtyActual": 195.0, "BD_min": 0.0, "BD_reasons": "[19.00-20.00] 195ตัว | [main] แก้ไขเครื่อง เปลี่ยนใบเลื่อย ขึ้นท่อตัด", "Achievement_pct": null, "Availability_pct": null, "Performance_pct": null, "OEE_pct": null, "Status": "Unplanned"}, {"Source": "Unplanned", "Location": "ไม่ระบุ", "MachineNo": "ข้อต่อ-อัด", "JobNo": "ORW26-00093", "ProductName": "ข้อต่อ 4\" รอส่งทำเกลียว", "Size": "", "Thickness": "", "PlanStart": null, "PlanEnd": null, "PlannedMin": 0.0, "SetUpMin": 0.0, "TotalWorkMin": 0.0, "QtyPlan": 0.0, "CapPerMin": 0.0, "PlanOperator": "", "ActualOperator": "Vitas Vutivimon", "QtyActual": 261.0, "BD_min": 0.0, "BD_reasons": "[19.00-20.00] 261ตัว", "Achievement_pct": null, "Availability_pct": null, "Performance_pct": null, "OEE_pct": null, "Status": "Unplanned"}], "bottleneck_list": [{"Source": "Planned", "Location": "8C", "MachineNo": "CH_A05 (B12)", "JobNo": "OFM26-00274", "ProductName": "ท่อร้อยสายไฟDAIWA- RSC 1/2นิ้ว-Zero Spangle", "Size": "1/2\"", "Thickness": 2.3, "PlanStart": "14/05/2026 16:00", "PlanEnd": "14/05/2026 20:00", "PlannedMin": 240.0, "SetUpMin": 120.0, "TotalWorkMin": 120.0, "QtyPlan": 1650.0, "CapPerMin": 14.0, "PlanOperator": "นายนาราภัทร สายจันดี", "ActualOperator": "Narapat Saichandee", "QtyActual": 500.0, "BD_min": 120.0, "BD_reasons": "[17.30-18.00] 17:30-19:30 SET UP เปลี่ยนแค้มป์ ปรับองศามีด ปรับชิ้นงาน AB", "Achievement_pct": 30.3, "Availability_pct": 0.0, "Performance_pct": null, "OEE_pct": null, "Status": "Bottleneck"}, {"Source": "Planned", "Location": "8C", "MachineNo": "RF_07", "JobNo": "OFM26-00298", "ProductName": "ท่อร้อยสายไฟDAIWA- IMC HDG 1/2นิ้ว", "Size": "1/2\"", "Thickness": 1.6, "PlanStart": "14/05/2026 08:00", "PlanEnd": "14/05/2026 17:00", "PlannedMin": 540.0, "SetUpMin": 60.0, "TotalWorkMin": 480.0, "QtyPlan": 10000.0, "CapPerMin": 16.7, "PlanOperator": "นายภูษิต บัวชุม,นายอุเทน กองสิงห์", "ActualOperator": "Phusit Buachum", "QtyActual": 600.0, "BD_min": 100.0, "BD_reasons": "[08.00-09.00] Setup 60นาที | [09.00-10.00] เปลี่ยนถ่านเชื่อม 40นาที", "Achievement_pct": 6.0, "Availability_pct": 79.2, "Performance_pct": 9.5, "OEE_pct": 7.5, "Status": "Bottleneck"}, {"Source": "Planned", "Location": "8F", "MachineNo": "TA_A05 (A14)", "JobNo": "OFM26-00126", "ProductName": "ท่อมอก.107เกลียวเหลืองS STK290-112.0(4\")x2.50x6ม.40.5kgZ80", "Size": "4\"", "Thickness": 2.5, "PlanStart": "14/05/2026 08:00", "PlanEnd": "14/05/2026 11:00", "PlannedMin": 180.0, "SetUpMin": 0.0, "TotalWorkMin": 180.0, "QtyPlan": 2000.0, "CapPerMin": 3.0, "PlanOperator": "นายวิชัย ด่านมะณี", "ActualOperator": "Wichai Danmanee", "QtyActual": 540.0, "BD_min": 70.0, "BD_reasons": "[08.00-09.00] เปลี่ยนมีด 20 นาที | [10.00-11.00] ช่วยช่าง set up a15 เวลาประมาณ 50 นาที | [main] เปลี่ยนมีด และช่วยช่าง set up a15", "Achievement_pct": 27.0, "Availability_pct": 61.1, "Performance_pct": 163.6, "OEE_pct": 100.0, "Status": "Bottleneck"}, {"Source": "Planned", "Location": "8B", "MachineNo": "SL_01", "JobNo": "OSE26-00141", "ProductName": "97.50 x 9, 182.00 x2, จับข้าง 4.5*4.0 -3.20(K450)", "Size": "", "Thickness": 3.2, "PlanStart": "14/05/2026 08:00", "PlanEnd": "14/05/2026 14:00", "PlannedMin": 360.0, "SetUpMin": 60.0, "TotalWorkMin": 300.0, "QtyPlan": 40000.0, "CapPerMin": 167.0, "PlanOperator": "นายเอกภพ ภู่ศรีพงษ์,นายสุภาพ เม่นแก้ว,นายสามารถ ดาสม", "ActualOperator": "Aekkaphob Phusriphong", "QtyActual": 4.0, "BD_min": 60.0, "BD_reasons": "[main] เครื่องเสียสายไฮดรอลิคแตก", "Achievement_pct": 0.0, "Availability_pct": 80.0, "Performance_pct": 0.0, "OEE_pct": 0.0, "Status": "Bottleneck"}, {"Source": "Planned", "Location": "8C", "MachineNo": "RF_06", "JobNo": "OFM26-00223", "ProductName": "ท่อร้อยสายไฟDAIWA- EMT HDG 1/2นิ้ว-S01 (2P)", "Size": "1/2\"", "Thickness": 0.9, "PlanStart": "14/05/2026 08:00", "PlanEnd": "14/05/2026 15:00", "PlannedMin": 420.0, "SetUpMin": 0.0, "TotalWorkMin": 420.0, "QtyPlan": 80000.0, "CapPerMin": 18.33, "PlanOperator": "นายสุรเชษฐ์ สุดศิลา,นายสงวน สุดแก้ว", "ActualOperator": "Surachest Sudsila", "QtyActual": 6836.0, "BD_min": 55.0, "BD_reasons": "[08.00-09.00] PM=15นาที | [14.00-15.00] แก้ไขเหล็กสลีทไส้แตก=40นาที | [15.00-16.00] 15.20จบรายการผลิต | [main] เหล็กสลีทไส้แตกบนunciler", "Achievement_pct": 8.5, "Availability_pct": 86.9, "Performance_pct": 102.2, "OEE_pct": 88.8, "Status": "Bottleneck"}, {"Source": "Planned", "Location": "8C", "MachineNo": "TA_A04 (A12)", "JobNo": "OFM26-00272", "ProductName": "ท่อร้อยสายไฟDAIWA- IMC HDG 1-1/2นิ้ว", "Size": "1-1/2\"", "Thickness": 1.95, "PlanStart": "14/05/2026 08:00", "PlanEnd": "14/05/2026 16:00", "PlannedMin": 480.0, "SetUpMin": 0.0, "TotalWorkMin": 480.0, "QtyPlan": 3600.0, "CapPerMin": 6.0, "PlanOperator": "นายนาราภัทร สายจันดี", "ActualOperator": "Narapat Saichandee", "QtyActual": 1350.0, "BD_min": 40.0, "BD_reasons": "[09.00-10.00] 09:00-09:40 ลับคมมีดเปลี่ยนมีด +ปรับชิ้นงานหัวB", "Achievement_pct": 37.5, "Availability_pct": 91.7, "Performance_pct": 51.1, "OEE_pct": 46.9, "Status": "Bottleneck"}, {"Source": "Planned", "Location": "8C", "MachineNo": "CH_A06 (B14)", "JobNo": "OFM26-00223", "ProductName": "ท่อร้อยสายไฟDAIWA- EMT HDG 1/2นิ้ว-S01 (2P)", "Size": "1/2\"", "Thickness": 0.9, "PlanStart": "14/05/2026 08:00", "PlanEnd": "14/05/2026 20:00", "PlannedMin": 720.0, "SetUpMin": 0.0, "TotalWorkMin": 720.0, "QtyPlan": 80000.0, "CapPerMin": 25.0, "PlanOperator": "นายกิตติพร เกษประเสริฐ", "ActualOperator": "Kittiporn Kesprasert", "QtyActual": 12000.0, "BD_min": 0.0, "BD_reasons": "", "Achievement_pct": 15.0, "Availability_pct": 100.0, "Performance_pct": 66.7, "OEE_pct": 66.7, "Status": "Bottleneck"}, {"Source": "Planned", "Location": "งานเครื่องข้อต่อ", "MachineNo": "CU_BL02(AMADA เล็ก)", "JobNo": "ORW26-00090", "ProductName": "ข้อต่อท่อร้อยสายไฟ HDG 2นิ้ว-HDG", "Size": "2\"", "Thickness": 4.0, "PlanStart": "14/05/2026 08:00", "PlanEnd": "14/05/2026 20:00", "PlannedMin": 720.0, "SetUpMin": 0.0, "TotalWorkMin": 720.0, "QtyPlan": 2200.0, "CapPerMin": 1.0, "PlanOperator": "นายวิทัต วุฒิวิมล", "ActualOperator": "Vitas Vutivimon", "QtyActual": 640.0, "BD_min": 0.0, "BD_reasons": "[19.00-20.00] 640ตัว", "Achievement_pct": 29.1, "Availability_pct": 100.0, "Performance_pct": 88.9, "OEE_pct": 88.9, "Status": "Bottleneck"}, {"Source": "Planned", "Location": "งานเครื่องข้อต่อ", "MachineNo": "ข้อต่อ-อัด", "JobNo": "ORW26-00090", "ProductName": "ข้อต่อท่อร้อยสายไฟ HDG 2นิ้ว-HDG", "Size": "2\"", "Thickness": 4.0, "PlanStart": "14/05/2026 13:00", "PlanEnd": "14/05/2026 20:00", "PlannedMin": 420.0, "SetUpMin": 30.0, "TotalWorkMin": 390.0, "QtyPlan": 2200.0, "CapPerMin": 4.0, "PlanOperator": "นายวิทัต วุฒิวิมล", "ActualOperator": "Vitas Vutivimon", "QtyActual": 630.0, "BD_min": 0.0, "BD_reasons": "[17.30-18.00] อัด1รอบ | [19.00-20.00] 210ตัว | [16.00-17.00] 420 | [main] แก้ไขเครื่องตัด เปลี่ยนใบเลื่อย ขึ้นท่อตัด", "Achievement_pct": 28.6, "Availability_pct": 100.0, "Performance_pct": 40.4, "OEE_pct": 40.4, "Status": "Bottleneck"}], "unfilled_list": [{"operator": "นายสุรเชษฐ์ สุดศิลา,นายสงวน สุดแก้ว", "machine": "RF_06", "job": "OFM26-00267", "product": "ท่อร้อยสายไฟDAIWA- EMT HDG 3/4นิ้ว D", "qty_plan": 50000}, {"operator": "นายประสาท แก้วนันทะ,นายเปรมชัย รุ่งอินทร์", "machine": NaN, "job": "OFM26-00282", "product": "ZIGA มอก.107 น้ำเงินเกลียว 2\" หนา1.95 สกรีน 2.1 มม.16.5+/-", "qty_plan": 2100}, {"operator": "นายสามารถ ดาสม", "machine": "BE_M03 (เครื่องดัดโค้ง- size 1-1/2\" - 2\")", "job": "ORW26-00081", "product": "ท่อโค้ง90' IMC-HDG 1-1/2นิ้ว", "qty_plan": 220}, {"operator": "นายสุภาพ เม่นแก้ว", "machine": "BE_M03 (เครื่องดัดโค้ง- size 1-1/2\" - 2\")", "job": "ORW26-00105", "product": "ท่อโค้ง90' IMC-HDG 2นิ้ว", "qty_plan": 500}, {"operator": "นายมนตรี รักเสมอวงค์", "machine": "BE_M05 (เครื่องดัดโค้ง- size 3\" - 5\" )", "job": "ORW26-00084", "product": "ท่อโค้ง90' RSC 4 นิ้ว", "qty_plan": 100}, {"operator": "นายศิวะกรณ์ สุขเจริญ", "machine": "CH_A05 (B12)", "job": "OFM26-00298", "product": "ท่อร้อยสายไฟDAIWA- IMC HDG 1/2นิ้ว", "qty_plan": 10000}, {"operator": "นายวิทัต วุฒิวิมล", "machine": "CU_BL01(AMADA ใหญ่)", "job": "ORW26-00102", "product": "ข้อต่อ 4\" รอส่งทำเกลียว", "qty_plan": 4620}, {"operator": "นายธัณพิสิฐ น้อมนุช", "machine": "LO_R04 (F4)", "job": "OFM26-00223", "product": "ท่อร้อยสายไฟDAIWA- EMT HDG 1/2นิ้ว-S01 (2P)", "qty_plan": 80000}, {"operator": "นายธัณพิสิฐ น้อมนุช", "machine": "LO_R04 (F4)", "job": "OFM26-00272", "product": "ท่อร้อยสายไฟDAIWA- IMC HDG 1-1/2นิ้ว", "qty_plan": 3600}, {"operator": "นายเอกภพ ภู่ศรีพงษ์,นายสุภาพ เม่นแก้ว,นายสามารถ ดาสม", "machine": "SL_02", "job": "OSE26-00137", "product": "55.80 x22 (OFM26-00266) , จับข้าง 11.20*11.20 -0.90", "qty_plan": 100000}, {"operator": "นายศิวะกรณ์ สุขเจริญ", "machine": "TA_A03 (A11)", "job": "OFM26-00257", "product": "ZIGA มอก.107 น้ำเงินเรียบ 1/2\" หนา1.90 มม.สกรีน 2.0 มม.5.3kg", "qty_plan": 2100}, {"operator": "นายวิชัย ด่านมะณี", "machine": "TA_A05 (A14)", "job": "OFM26-00229", "product": "ท่อ HZO2-1/2\"(65) มอก.276-2562 เกลียว รุ่น 3.6มม. 34.6+/-กก.", "qty_plan": 500}, {"operator": "นายเอกภพ ภู่ศรีพงษ์", "machine": "TA_M_ELBOW_02 (ทำเกลียวท่อโค้ง)", "job": "ORW26-00105", "product": "ท่อโค้ง90' IMC-HDG 2นิ้ว", "qty_plan": 500}, {"operator": "นายวิทัต วุฒิวิมล", "machine": "ข้อต่อ-ลบคม", "job": "ORW26-00075", "product": "ข้อต่อท่อร้อยสายไฟ HDG 1นิ้ว รุ่นSuper", "qty_plan": 7616}, {"operator": "นายรุ่งโรจน์ วามะลุน", "machine": "ข้อต่อ-ล้าง", "job": "ORW26-00074", "product": "ข้อต่อท่อร้อยสายไฟ HDG 2นิ้ว(RSC Super)", "qty_plan": 2200}]};
+const DATA = {"kpis": {"date": "15/05/2026", "date_iso": "2026-05-15", "date_th": "15 พฤษภาคม 2569", "plan_jobs": 37, "actual_jobs": 15, "qty_plan_total": 510911, "qty_actual_total": 32717, "overall_ach_all": 6.4, "overall_ach_started": 24.7, "total_bd": 890, "bottleneck_n": 9, "behind_n": 1, "ontarget_n": 1, "over_n": 0, "notstarted_n": 26, "unplanned_n": 4}, "records": [{"Source": "Planned", "Location": "2", "MachineNo": "RF_04", "JobNo": "OFM26-00189", "ProductName": "ท่อ HZO 4\"(100) มอก.276 -2562เกลียวหนา 4.5 มม.66.0+/-กก.Zero", "Thickness": 4.0, "PlanStart": "15/05/2026 08:00", "PlanEnd": "15/05/2026 09:30", "PlannedMin": 90.0, "SetUpMin": 0.0, "TotalWorkMin": 75.0, "QtyPlan": 800.0, "CapPerMin": 2.5, "PlanOperator": "นายภูมินทร์ มั่นศักดิ์,นายสงบ การบรรจง", "ActualOperator": "Poomin Mansak", "PlanStatus": "เดินงานตามปกติ", "QtyActual": 116.0, "BD_min": 285.0, "BD_reasons": "[08.00-09.00] แจ้งซ่อมลูกปืนโล SQ แตก | [13.00-14.00] มะกอกโรนำเหล็กเข้า  45 น.ท | [14.00-15.00] จบงาน | [main] แจ้งซ่อมลูกปืน Roll sq แตก", "Achievement_pct": 14.5, "Availability_pct": 0.0, "Performance_pct": null, "OEE_pct": null, "Status": "Bottleneck"}, {"Source": "Planned", "Location": "8C", "MachineNo": "TA_A04 (A12)", "JobNo": "OFM26-00298", "ProductName": "ท่อร้อยสายไฟDAIWA- IMC HDG 1/2นิ้ว", "Thickness": 1.6, "PlanStart": "15/05/2026 08:00", "PlanEnd": "15/05/2026 20:00", "PlannedMin": 720.0, "SetUpMin": 0.0, "TotalWorkMin": 460.0, "QtyPlan": 10000.0, "CapPerMin": 14.0, "PlanOperator": "นายนาราภัทร สายจันดี", "ActualOperator": "Narapat Saichandee", "PlanStatus": "เดินงานตามปกติ", "QtyActual": 2500.0, "BD_min": 70.0, "BD_reasons": "[13.00-14.00] 13:00-14:30 ท่อความหนาต่าง ปรับแค้มป์ปรับชิ้นงานAB | [17.30-18.00] 17:30-18:30 เปลี่ยนมีดAB", "Achievement_pct": 25.0, "Availability_pct": 84.8, "Performance_pct": 45.8, "OEE_pct": 38.8, "Status": "Bottleneck"}, {"Source": "Planned", "Location": "8C", "MachineNo": "CH_A05 (B12)", "JobNo": "OFM26-00298", "ProductName": "ท่อร้อยสายไฟDAIWA- IMC HDG 1/2นิ้ว", "Thickness": 1.6, "PlanStart": "15/05/2026 08:00", "PlanEnd": "15/05/2026 20:00", "PlannedMin": 720.0, "SetUpMin": 0.0, "TotalWorkMin": 540.0, "QtyPlan": 10000.0, "CapPerMin": 14.0, "PlanOperator": "นายศิวะกรณ์ สุขเจริญ", "ActualOperator": "Siwakorn Sukcharoen", "PlanStatus": "เดินงานตามปกติ", "QtyActual": 5722.0, "BD_min": 35.0, "BD_reasons": "[11.00-12.00] 11.05เริ่มงาน20นาทีตั้งมีด | [12.00-13.00] พัก | [16.00-17.00] 15นาทีรอลม | [17.30-18.00] 30นาทีพัก", "Achievement_pct": 57.2, "Availability_pct": 93.5, "Performance_pct": 80.9, "OEE_pct": 75.6, "Status": "Bottleneck"}, {"Source": "Planned", "Location": "8C", "MachineNo": "CH_A06 (B14)", "JobNo": "OFM26-00223", "ProductName": "ท่อร้อยสายไฟDAIWA- EMT HDG 1/2นิ้ว-S01 (2P)", "Thickness": 0.9, "PlanStart": "15/05/2026 08:00", "PlanEnd": "15/05/2026 17:00", "PlannedMin": 540.0, "SetUpMin": 0.0, "TotalWorkMin": 405.0, "QtyPlan": 80000.0, "CapPerMin": 25.0, "PlanOperator": "นายกิตติพร เกษประเสริฐ", "ActualOperator": "Kittiporn Kesprasert", "PlanStatus": "เดินงานตามปกติ", "QtyActual": 9600.0, "BD_min": 10.0, "BD_reasons": "[16.00-17.00] 10 | [main] ลมหมด", "Achievement_pct": 12.0, "Availability_pct": 97.5, "Performance_pct": 97.2, "OEE_pct": 94.8, "Status": "Bottleneck"}, {"Source": "Planned", "Location": "งานเครื่องข้อต่อ", "MachineNo": "CU_BL01(AMADA ใหญ่)", "JobNo": "ORW26-00102", "ProductName": "ข้อต่อ 4\" รอส่งทำเกลียว", "Thickness": "", "PlanStart": "15/05/2026 08:00", "PlanEnd": "15/05/2026 20:00", "PlannedMin": 720.0, "SetUpMin": 0.0, "TotalWorkMin": 555.0, "QtyPlan": 4620.0, "CapPerMin": 0.5, "PlanOperator": "นายวิทัต วุฒิวิมล", "ActualOperator": "Vitas Vutivimon", "PlanStatus": "เดินงานตามปกติ", "QtyActual": 195.0, "BD_min": 0.0, "BD_reasons": "[19.00-20.00] 195ตัว | [main] เปลี่ยนใบเลื่อย ใบเลื่อยติด", "Achievement_pct": 4.2, "Availability_pct": 100.0, "Performance_pct": 70.3, "OEE_pct": 70.3, "Status": "Bottleneck"}, {"Source": "Planned", "Location": "งานเครื่องข้อต่อ", "MachineNo": "CU_BL02(AMADA เล็ก)", "JobNo": "ORW26-00097", "ProductName": "ข้อต่อท่อร้อยสายไฟ HDG 1-1/4นิ้ว", "Thickness": 3.2, "PlanStart": "15/05/2026 08:00", "PlanEnd": "15/05/2026 20:00", "PlannedMin": 720.0, "SetUpMin": 0.0, "TotalWorkMin": 555.0, "QtyPlan": 9315.0, "CapPerMin": 4.5, "PlanOperator": "นายวิทัต วุฒิวิมล", "ActualOperator": "Vitas Vutivimon", "PlanStatus": "เดินงานตามปกติ", "QtyActual": 1020.0, "BD_min": 0.0, "BD_reasons": "[19.00-20.00] 1020ตัว | [main] ตั้งเครื่อง/แก้ไขงาน งานโก่ง/เปิดรอบตัดช้าลดงานเอียง", "Achievement_pct": 11.0, "Availability_pct": 100.0, "Performance_pct": 40.8, "OEE_pct": 40.8, "Status": "Bottleneck"}, {"Source": "Planned", "Location": "2", "MachineNo": "RF_04", "JobNo": "OFM26-00117", "ProductName": "ท่อมอก107เกลียวน้ำเงินM STK290-114.3(4\")x 2.8(3)x6ม46.0kgZ80", "Thickness": 2.8, "PlanStart": "15/05/2026 09:30", "PlanEnd": "15/05/2026 20:00", "PlannedMin": 630.0, "SetUpMin": 30.0, "TotalWorkMin": 555.0, "QtyPlan": 2000.0, "CapPerMin": 3.3, "PlanOperator": "นายภูมินทร์ มั่นศักดิ์,นายสงบ การบรรจง", "ActualOperator": "Poomin Mansak", "PlanStatus": "เดินงานตามปกติ", "QtyActual": 780.0, "BD_min": 0.0, "BD_reasons": "[14.00-15.00] ปรับ  OD", "Achievement_pct": 39.0, "Availability_pct": 100.0, "Performance_pct": 42.6, "OEE_pct": 42.6, "Status": "Bottleneck"}, {"Source": "Planned", "Location": "8C", "MachineNo": "RF_07", "JobNo": "OFM26-00298", "ProductName": "ท่อร้อยสายไฟDAIWA- IMC HDG 1/2นิ้ว", "Thickness": 1.6, "PlanStart": "15/05/2026 08:00", "PlanEnd": "15/05/2026 13:00", "PlannedMin": 300.0, "SetUpMin": 0.0, "TotalWorkMin": 285.0, "QtyPlan": 10000.0, "CapPerMin": 16.7, "PlanOperator": "นายภูษิต บัวชุม,นายอุเทน กองสิงห์", "ActualOperator": "Phusit Buachum", "PlanStatus": "เดินงานตามปกติ", "QtyActual": 5222.0, "BD_min": 0.0, "BD_reasons": "", "Achievement_pct": 52.2, "Availability_pct": 100.0, "Performance_pct": 109.7, "OEE_pct": 109.7, "Status": "Bottleneck"}, {"Source": "Planned", "Location": "งานเครื่องข้อต่อ", "MachineNo": "ข้อต่อ-อัด", "JobNo": "ORW26-00090", "ProductName": "ข้อต่อท่อร้อยสายไฟ HDG 2นิ้ว-HDG", "Thickness": 4.0, "PlanStart": "15/05/2026 08:00", "PlanEnd": "15/05/2026 20:00", "PlannedMin": 720.0, "SetUpMin": 0.0, "TotalWorkMin": 600.0, "QtyPlan": 2200.0, "CapPerMin": 4.0, "PlanOperator": "นายวิทัต วุฒิวิมล", "ActualOperator": "Vitas Vutivimon", "PlanStatus": "เดินงานตามปกติ", "QtyActual": 630.0, "BD_min": 0.0, "BD_reasons": "[17.30-18.00] เริ่มอัด | [19.00-20.00] 210ตัว | [16.00-17.00] 420 | [main] ขึ้นงาตัดท่อ/ตั้งเครื่องตัด/แก้ไขเครื่องจักร", "Achievement_pct": 28.6, "Availability_pct": 100.0, "Performance_pct": 26.2, "OEE_pct": 26.2, "Status": "Bottleneck"}, {"Source": "Planned", "Location": "8E", "MachineNo": "RF_05", "JobNo": "OFM26-00276", "ProductName": "ท่อ HZO 2\"(50) เกลียว หนา 3.2 มม สกรีน 3.6 มม.. 27.5+/- กก.", "Thickness": 3.2, "PlanStart": "15/05/2026 08:00", "PlanEnd": "15/05/2026 13:00", "PlannedMin": 300.0, "SetUpMin": 0.0, "TotalWorkMin": 285.0, "QtyPlan": 1600.0, "CapPerMin": 4.17, "PlanOperator": "นายสุรเชษฐ์ สุดศิลา,นายสงวน สุดแก้ว", "ActualOperator": "Surachest Sudsila", "PlanStatus": "เดินงานตามปกติ", "QtyActual": 1208.0, "BD_min": 55.0, "BD_reasons": "[08.00-09.00] PM=15นาที | [09.00-10.00] รอยต่อขาด=40นาที | [14.00-15.00] 15.00จบรายการผลิต | [main] รอยต่อขาด", "Achievement_pct": 75.5, "Availability_pct": 80.7, "Performance_pct": 126.0, "OEE_pct": 101.7, "Status": "Behind"}, {"Source": "Planned", "Location": "8E", "MachineNo": "RF_07", "JobNo": "OFM26-00288", "ProductName": "ZIGA มอก.107 เหลืองเกลียว 3/4\" หนา1.3 สกรีน 1.4 มม. 4.7+/-", "Thickness": 1.3, "PlanStart": "15/05/2026 13:00", "PlanEnd": "15/05/2026 17:00", "PlannedMin": 240.0, "SetUpMin": 240.0, "TotalWorkMin": 0.0, "QtyPlan": 11200.0, "CapPerMin": 12.5, "PlanOperator": "นายภูษิต บัวชุม,นายอุเทน กองสิงห์", "ActualOperator": "Phusit Buachum", "PlanStatus": "SET UP by พนักงานเอง", "QtyActual": 0.0, "BD_min": 210.0, "BD_reasons": "[13.00-14.00] เปลี่ยนโรล์ 30นาที | [14.00-15.00] เปลี่ยนโรล์ 60นาที | [15.00-16.00] เปลี่ยนโรล์ 60นาที | [16.00-17.00] เปลี่ยนโรล์ 60นาที | [main] เปลี่ยนโรล์", "Achievement_pct": 0.0, "Availability_pct": null, "Performance_pct": null, "OEE_pct": null, "Status": "NotStarted"}, {"Source": "Planned", "Location": "8E", "MachineNo": "RF_05", "JobNo": "OFM26-00291", "ProductName": "ZIGA มอก.107 เหลืองเกลียว 2\" หนา1.7 มม. สกรีน 1.9 มม.14.3+/-", "Thickness": 1.7, "PlanStart": "15/05/2026 13:00", "PlanEnd": "15/05/2026 17:00", "PlannedMin": 240.0, "SetUpMin": 60.0, "TotalWorkMin": 165.0, "QtyPlan": 2000.0, "CapPerMin": 8.33, "PlanOperator": "นายสุรเชษฐ์ สุดศิลา,นายสงวน สุดแก้ว", "ActualOperator": "Surachest Sudsila", "PlanStatus": "เดินงานตามปกติ", "QtyActual": 0.0, "BD_min": 15.0, "BD_reasons": "[15.00-16.00] 15.00เริ่มSETUP | [16.00-17.00] 5ส=15นาที | [main] 5ส", "Achievement_pct": 0.0, "Availability_pct": 90.9, "Performance_pct": 0.0, "OEE_pct": 0.0, "Status": "NotStarted"}, {"Source": "PlannedNoActual", "Location": "งานเครื่องโค้ง", "MachineNo": "BE_M03 (เครื่องดัดโค้ง- size 1-1/2\" - 2\")", "JobNo": "ORW26-00081", "ProductName": "ท่อโค้ง90' IMC-HDG 1-1/2นิ้ว", "Thickness": "", "PlanStart": "15/05/2026 17:30", "PlanEnd": "15/05/2026 20:00", "PlannedMin": 150.0, "SetUpMin": 0.0, "TotalWorkMin": 135.0, "QtyPlan": 220.0, "CapPerMin": 0.3, "PlanOperator": "นายสามารถ ดาสม", "ActualOperator": "", "PlanStatus": "เดินงานตามปกติ", "QtyActual": 0.0, "BD_min": 0.0, "BD_reasons": "", "Achievement_pct": 0.0, "Availability_pct": 100.0, "Performance_pct": 0.0, "OEE_pct": 0.0, "Status": "NotStarted"}, {"Source": "PlannedNoActual", "Location": "งานเครื่องโค้ง", "MachineNo": "BE_M03 (เครื่องดัดโค้ง- size 1-1/2\" - 2\")", "JobNo": "ORW26-00105", "ProductName": "ท่อโค้ง90' IMC-HDG 2นิ้ว", "Thickness": "", "PlanStart": "15/05/2026 17:30", "PlanEnd": "15/05/2026 20:00", "PlannedMin": 150.0, "SetUpMin": 0.0, "TotalWorkMin": 135.0, "QtyPlan": 500.0, "CapPerMin": 0.3, "PlanOperator": "นายสุภาพ เม่นแก้ว", "ActualOperator": "", "PlanStatus": "เดินงานตามปกติ", "QtyActual": 0.0, "BD_min": 0.0, "BD_reasons": "", "Achievement_pct": 0.0, "Availability_pct": 100.0, "Performance_pct": 0.0, "OEE_pct": 0.0, "Status": "NotStarted"}, {"Source": "PlannedNoActual", "Location": "งานเครื่องโค้ง", "MachineNo": "BE_M05 (เครื่องดัดโค้ง- size 3\" - 5\" )", "JobNo": "ORW26-00082", "ProductName": "ท่อโค้ง90' IMC-HDG 4นิ้ว", "Thickness": "", "PlanStart": "15/05/2026 13:00", "PlanEnd": "15/05/2026 17:00", "PlannedMin": 240.0, "SetUpMin": 0.0, "TotalWorkMin": 225.0, "QtyPlan": 112.0, "CapPerMin": 0.2, "PlanOperator": "นายมนตรี รักเสมอวงค์", "ActualOperator": "", "PlanStatus": "เดินงานตามปกติ", "QtyActual": 0.0, "BD_min": 0.0, "BD_reasons": "", "Achievement_pct": 0.0, "Availability_pct": 100.0, "Performance_pct": 0.0, "OEE_pct": 0.0, "Status": "NotStarted"}, {"Source": "PlannedNoActual", "Location": "งานเครื่องโค้ง", "MachineNo": "BE_M05 (เครื่องดัดโค้ง- size 3\" - 5\" )", "JobNo": "ORW26-00084", "ProductName": "ท่อโค้ง90' RSC 4 นิ้ว", "Thickness": "", "PlanStart": "15/05/2026 08:00", "PlanEnd": "15/05/2026 12:00", "PlannedMin": 240.0, "SetUpMin": 0.0, "TotalWorkMin": 225.0, "QtyPlan": 100.0, "CapPerMin": 0.2, "PlanOperator": "นายมนตรี รักเสมอวงค์", "ActualOperator": "", "PlanStatus": "เดินงานตามปกติ", "QtyActual": 0.0, "BD_min": 0.0, "BD_reasons": "", "Achievement_pct": 0.0, "Availability_pct": 100.0, "Performance_pct": 0.0, "OEE_pct": 0.0, "Status": "NotStarted"}, {"Source": "PlannedNoActual", "Location": "8E", "MachineNo": "CH_A02 (B9)", "JobNo": "OFM26-00283", "ProductName": "ZIGA มอก.107 แดงเรียบ 3/4\" หนา1.3 มม. สกรีน 1.4 มม. 4.7+/-", "Thickness": 1.3, "PlanStart": "15/05/2026 13:00", "PlanEnd": "15/05/2026 16:00", "PlannedMin": 180.0, "SetUpMin": 180.0, "TotalWorkMin": 0.0, "QtyPlan": 5700.0, "CapPerMin": 120.0, "PlanOperator": "นายประสาท แก้วนันทะ,นายเปรมชัย รุ่งอินทร์", "ActualOperator": "", "PlanStatus": "SET UP by ช่าง", "QtyActual": 0.0, "BD_min": 0.0, "BD_reasons": "", "Achievement_pct": 0.0, "Availability_pct": null, "Performance_pct": null, "OEE_pct": null, "Status": "NotStarted"}, {"Source": "PlannedNoActual", "Location": "งานเครื่องโค้ง", "MachineNo": "CH_ELBOW01 (เครื่องลบคมท่อโค้ง)", "JobNo": "ORW26-00105", "ProductName": "ท่อโค้ง90' IMC-HDG 2นิ้ว", "Thickness": "", "PlanStart": "15/05/2026 08:00", "PlanEnd": "15/05/2026 20:00", "PlannedMin": 720.0, "SetUpMin": 0.0, "TotalWorkMin": 600.0, "QtyPlan": 500.0, "CapPerMin": 0.5, "PlanOperator": "out source", "ActualOperator": "", "PlanStatus": "เดินงานตามปกติ", "QtyActual": 0.0, "BD_min": 0.0, "BD_reasons": "", "Achievement_pct": 0.0, "Availability_pct": 100.0, "Performance_pct": 0.0, "OEE_pct": 0.0, "Status": "NotStarted"}, {"Source": "PlannedNoActual", "Location": "8F", "MachineNo": "LO_R02+PA_M02 (F2P2)", "JobNo": "OFM26-00113", "ProductName": "ท่อ HZO 4\"(100) มอก.276-2562 เรียบรุ่น 4.5 มม.66.0+/-กก.Zero", "Thickness": 4.0, "PlanStart": "15/05/2026 20:30", "PlanEnd": "15/05/2026 22:00", "PlannedMin": 90.0, "SetUpMin": 30.0, "TotalWorkMin": 45.0, "QtyPlan": 650.0, "CapPerMin": 1.0, "PlanOperator": "out source", "ActualOperator": "", "PlanStatus": "แพ็คแบบเหมา", "QtyActual": 0.0, "BD_min": 0.0, "BD_reasons": "", "Achievement_pct": 0.0, "Availability_pct": 100.0, "Performance_pct": 0.0, "OEE_pct": 0.0, "Status": "NotStarted"}, {"Source": "PlannedNoActual", "Location": "8F", "MachineNo": "LO_R02+PA_M02 (F2P2)", "JobNo": "OFM26-00154", "ProductName": "ท่อมอก.107เรียบเหลืองS STK290-112.0(4\")x2.50x6ม.40.5kgZ80", "Thickness": 2.5, "PlanStart": "15/05/2026 17:30", "PlanEnd": "15/05/2026 20:30", "PlannedMin": 180.0, "SetUpMin": 0.0, "TotalWorkMin": 180.0, "QtyPlan": 200.0, "CapPerMin": 1.33, "PlanOperator": "out source", "ActualOperator": "", "PlanStatus": "แพ็คแบบเหมา", "QtyActual": 0.0, "BD_min": 0.0, "BD_reasons": "", "Achievement_pct": 0.0, "Availability_pct": 100.0, "Performance_pct": 0.0, "OEE_pct": 0.0, "Status": "NotStarted"}, {"Source": "PlannedNoActual", "Location": "8C", "MachineNo": "LO_R04 (F4)", "JobNo": "OFM26-00223", "ProductName": "ท่อร้อยสายไฟDAIWA- EMT HDG 1/2นิ้ว-S01 (2P)", "Thickness": 0.9, "PlanStart": "15/05/2026 08:00", "PlanEnd": "15/05/2026 20:00", "PlannedMin": 720.0, "SetUpMin": 0.0, "TotalWorkMin": 570.0, "QtyPlan": 80000.0, "CapPerMin": 17.78, "PlanOperator": "นายธัณพิสิฐ น้อมนุช", "ActualOperator": "", "PlanStatus": "เดินงานตามปกติ", "QtyActual": 0.0, "BD_min": 0.0, "BD_reasons": "", "Achievement_pct": 0.0, "Availability_pct": 100.0, "Performance_pct": 0.0, "OEE_pct": 0.0, "Status": "NotStarted"}, {"Source": "PlannedNoActual", "Location": "8D", "MachineNo": "LO_R06+PA_M06 (F6P6)", "JobNo": "OFM26-00261", "ProductName": "ZIGA มอก.107 แดงเรียบ 1/2\" หนา1.3 มม. สกรีน 1.4 มม. 3.6+/-", "Thickness": 1.3, "PlanStart": "15/05/2026 08:00", "PlanEnd": "15/05/2026 17:00", "PlannedMin": 540.0, "SetUpMin": 0.0, "TotalWorkMin": 480.0, "QtyPlan": 5000.0, "CapPerMin": 9.15, "PlanOperator": "out source", "ActualOperator": "", "PlanStatus": "แพ็คแบบเหมา", "QtyActual": 0.0, "BD_min": 0.0, "BD_reasons": "", "Achievement_pct": 0.0, "Availability_pct": 100.0, "Performance_pct": 0.0, "OEE_pct": 0.0, "Status": "NotStarted"}, {"Source": "PlannedNoActual", "Location": "8C", "MachineNo": "PA_EL01 (P4-ราง1)", "JobNo": "OFM26-00161", "ProductName": "ท่อร้อยสายไฟDAIWA- RSC 2-1/2นิ้ว-Zero Spangle", "Thickness": 4.0, "PlanStart": "15/05/2026 08:00", "PlanEnd": "15/05/2026 12:00", "PlannedMin": 240.0, "SetUpMin": 0.0, "TotalWorkMin": 240.0, "QtyPlan": 600.0, "CapPerMin": 0.43, "PlanOperator": "out source", "ActualOperator": "", "PlanStatus": "เดินงานตามปกติ", "QtyActual": 0.0, "BD_min": 0.0, "BD_reasons": "", "Achievement_pct": 0.0, "Availability_pct": 100.0, "Performance_pct": 0.0, "OEE_pct": 0.0, "Status": "NotStarted"}, {"Source": "PlannedNoActual", "Location": "8C", "MachineNo": "PA_EL01 (P4-ราง1)", "JobNo": "OFM26-00167", "ProductName": "ท่อร้อยสายไฟDAIWA- RSC 2-1/2นิ้ว-Zero Spangle", "Thickness": 4.0, "PlanStart": "15/05/2026 13:00", "PlanEnd": "15/05/2026 22:00", "PlannedMin": 540.0, "SetUpMin": 0.0, "TotalWorkMin": 495.0, "QtyPlan": 600.0, "CapPerMin": 0.43, "PlanOperator": "out source", "ActualOperator": "", "PlanStatus": "เดินงานตามปกติ", "QtyActual": 0.0, "BD_min": 0.0, "BD_reasons": "", "Achievement_pct": 0.0, "Availability_pct": 100.0, "Performance_pct": 0.0, "OEE_pct": 0.0, "Status": "NotStarted"}, {"Source": "PlannedNoActual", "Location": "8C", "MachineNo": "PA_EL02 (P4-ราง2)", "JobNo": "OFM26-00223", "ProductName": "ท่อร้อยสายไฟDAIWA- EMT HDG 1/2นิ้ว-S01 (2P)", "Thickness": 0.9, "PlanStart": "15/05/2026 08:00", "PlanEnd": "15/05/2026 17:00", "PlannedMin": 540.0, "SetUpMin": 0.0, "TotalWorkMin": 435.0, "QtyPlan": 80000.0, "CapPerMin": 17.21, "PlanOperator": "out source", "ActualOperator": "", "PlanStatus": "เดินงานตามปกติ", "QtyActual": 0.0, "BD_min": 0.0, "BD_reasons": "", "Achievement_pct": 0.0, "Availability_pct": 100.0, "Performance_pct": 0.0, "OEE_pct": 0.0, "Status": "NotStarted"}, {"Source": "PlannedNoActual", "Location": "8C", "MachineNo": "PA_EL02 (P4-ราง2)", "JobNo": "OFM26-00249", "ProductName": "ท่อร้อยสายไฟDAIWA- RSC 2นิ้ว-ข้ามเดือนจาก OFM26-00068", "Thickness": 3.2, "PlanStart": "15/05/2026 17:30", "PlanEnd": "15/05/2026 22:00", "PlannedMin": 270.0, "SetUpMin": 0.0, "TotalWorkMin": 255.0, "QtyPlan": 670.0, "CapPerMin": 1.32, "PlanOperator": "out source", "ActualOperator": "", "PlanStatus": "เดินงานตามปกติ", "QtyActual": 0.0, "BD_min": 0.0, "BD_reasons": "", "Achievement_pct": 0.0, "Availability_pct": 100.0, "Performance_pct": 0.0, "OEE_pct": 0.0, "Status": "NotStarted"}, {"Source": "PlannedNoActual", "Location": "8C", "MachineNo": "PA_EL03 (P4-ราง3)", "JobNo": "OFM26-00223", "ProductName": "ท่อร้อยสายไฟDAIWA- EMT HDG 1/2นิ้ว-S01 (2P)", "Thickness": 0.9, "PlanStart": "15/05/2026 08:00", "PlanEnd": "15/05/2026 17:00", "PlannedMin": 540.0, "SetUpMin": 0.0, "TotalWorkMin": 465.0, "QtyPlan": 80000.0, "CapPerMin": 17.21, "PlanOperator": "out source", "ActualOperator": "", "PlanStatus": "เดินงานตามปกติ", "QtyActual": 0.0, "BD_min": 0.0, "BD_reasons": "", "Achievement_pct": 0.0, "Availability_pct": 100.0, "Performance_pct": 0.0, "OEE_pct": 0.0, "Status": "NotStarted"}, {"Source": "PlannedNoActual", "Location": "8C", "MachineNo": "PA_EL03 (P4-ราง3)", "JobNo": "OFM26-00272", "ProductName": "ท่อร้อยสายไฟDAIWA- IMC HDG 1-1/2นิ้ว", "Thickness": 1.95, "PlanStart": "15/05/2026 17:30", "PlanEnd": "15/05/2026 22:00", "PlannedMin": 270.0, "SetUpMin": 0.0, "TotalWorkMin": 255.0, "QtyPlan": 3600.0, "CapPerMin": 1.62, "PlanOperator": "out source", "ActualOperator": "", "PlanStatus": "เดินงานตามปกติ", "QtyActual": 0.0, "BD_min": 0.0, "BD_reasons": "", "Achievement_pct": 0.0, "Availability_pct": 100.0, "Performance_pct": 0.0, "OEE_pct": 0.0, "Status": "NotStarted"}, {"Source": "PlannedNoActual", "Location": "งานเครื่องโค้ง", "MachineNo": "PA_ELBOW-พ่นสี ใส่โปรท่อโค้ง", "JobNo": "ORW26-00084", "ProductName": "ท่อโค้ง90' RSC 4 นิ้ว", "Thickness": "", "PlanStart": "15/05/2026 17:30", "PlanEnd": "15/05/2026 20:00", "PlannedMin": 150.0, "SetUpMin": 0.0, "TotalWorkMin": 135.0, "QtyPlan": 100.0, "CapPerMin": 1.0, "PlanOperator": "out source", "ActualOperator": "", "PlanStatus": "เดินงานตามปกติ", "QtyActual": 0.0, "BD_min": 0.0, "BD_reasons": "", "Achievement_pct": 0.0, "Availability_pct": 100.0, "Performance_pct": 0.0, "OEE_pct": 0.0, "Status": "NotStarted"}, {"Source": "PlannedNoActual", "Location": "งานเครื่องโค้ง", "MachineNo": "PA_ELBOW-พ่นสี ใส่โปรท่อโค้ง", "JobNo": "ORW26-00092", "ProductName": "ท่อโค้ง90' RSC 2 นิ้ว", "Thickness": "", "PlanStart": "15/05/2026 08:00", "PlanEnd": "15/05/2026 17:00", "PlannedMin": 540.0, "SetUpMin": 0.0, "TotalWorkMin": 450.0, "QtyPlan": 300.0, "CapPerMin": 1.0, "PlanOperator": "out source", "ActualOperator": "", "PlanStatus": "เดินงานตามปกติ", "QtyActual": 0.0, "BD_min": 0.0, "BD_reasons": "", "Achievement_pct": 0.0, "Availability_pct": 100.0, "Performance_pct": 0.0, "OEE_pct": 0.0, "Status": "NotStarted"}, {"Source": "PlannedNoActual", "Location": "8B", "MachineNo": "SL_02", "JobNo": "OSE26-00137", "ProductName": "55.80 x22 (OFM26-00266) , จับข้าง 11.20*11.20 -0.90", "Thickness": 0.9, "PlanStart": "15/05/2026 08:00", "PlanEnd": "15/05/2026 17:00", "PlannedMin": 540.0, "SetUpMin": 0.0, "TotalWorkMin": 465.0, "QtyPlan": 100000.0, "CapPerMin": 167.0, "PlanOperator": "นายเอกภพ ภู่ศรีพงษ์,นายสุภาพ เม่นแก้ว,นายสามารถ ดาสม", "ActualOperator": "", "PlanStatus": "เดินงานตามปกติ", "QtyActual": 0.0, "BD_min": 0.0, "BD_reasons": "", "Achievement_pct": 0.0, "Availability_pct": 100.0, "Performance_pct": 0.0, "OEE_pct": 0.0, "Status": "NotStarted"}, {"Source": "PlannedNoActual", "Location": "8D", "MachineNo": "TA_A03 (A11)", "JobNo": "OFM26-00264", "ProductName": "ZIGA มอก.107 เหลืองเกลียว 1\" หนา1.6 มม. สกรีน 1.8 มม. 7.1+/-", "Thickness": 1.7, "PlanStart": "15/05/2026 09:00", "PlanEnd": "15/05/2026 12:00", "PlannedMin": 180.0, "SetUpMin": 180.0, "TotalWorkMin": 0.0, "QtyPlan": 1000.0, "CapPerMin": 120.0, "PlanOperator": "นายประสาท แก้วนันทะ,นายเปรมชัย รุ่งอินทร์", "ActualOperator": "", "PlanStatus": "SET UP by ช่าง", "QtyActual": 0.0, "BD_min": 0.0, "BD_reasons": "", "Achievement_pct": 0.0, "Availability_pct": null, "Performance_pct": null, "OEE_pct": null, "Status": "NotStarted"}, {"Source": "PlannedNoActual", "Location": "8E", "MachineNo": "TA_A06 (A15)", "JobNo": "OFM26-00276", "ProductName": "ท่อ HZO 2\"(50) เกลียว หนา 3.2 มม สกรีน 3.6 มม.. 27.5+/- กก.", "Thickness": 3.2, "PlanStart": "15/05/2026 19:00", "PlanEnd": "15/05/2026 20:00", "PlannedMin": 60.0, "SetUpMin": 45.0, "TotalWorkMin": 15.0, "QtyPlan": 1600.0, "CapPerMin": 3.0, "PlanOperator": "นายวิชัย ด่านมะณี", "ActualOperator": "", "PlanStatus": "SET UP by พนักงานเอง", "QtyActual": 0.0, "BD_min": 0.0, "BD_reasons": "", "Achievement_pct": 0.0, "Availability_pct": 100.0, "Performance_pct": 0.0, "OEE_pct": 0.0, "Status": "NotStarted"}, {"Source": "PlannedNoActual", "Location": "งานเครื่องโค้ง", "MachineNo": "TA_M_ELBOW_02 (ทำเกลียวท่อโค้ง)", "JobNo": "ORW26-00105", "ProductName": "ท่อโค้ง90' IMC-HDG 2นิ้ว", "Thickness": "", "PlanStart": "15/05/2026 17:30", "PlanEnd": "15/05/2026 20:00", "PlannedMin": 150.0, "SetUpMin": 0.0, "TotalWorkMin": 135.0, "QtyPlan": 500.0, "CapPerMin": 0.8, "PlanOperator": "นายเอกภพ ภู่ศรีพงษ์", "ActualOperator": "", "PlanStatus": "เดินงานตามปกติ", "QtyActual": 0.0, "BD_min": 0.0, "BD_reasons": "", "Achievement_pct": 0.0, "Availability_pct": 100.0, "Performance_pct": 0.0, "OEE_pct": 0.0, "Status": "NotStarted"}, {"Source": "PlannedNoActual", "Location": "งานเครื่องข้อต่อ", "MachineNo": "ข้อต่อ-ล้าง", "JobNo": "ORW26-00074", "ProductName": "ข้อต่อท่อร้อยสายไฟ HDG 2นิ้ว(RSC Super)", "Thickness": 4.0, "PlanStart": "15/05/2026 08:00", "PlanEnd": "15/05/2026 17:00", "PlannedMin": 540.0, "SetUpMin": 0.0, "TotalWorkMin": 450.0, "QtyPlan": 2200.0, "CapPerMin": 2.2, "PlanOperator": "นายรุ่งโรจน์ วามะลุน", "ActualOperator": "", "PlanStatus": "เดินงานตามปกติ", "QtyActual": 0.0, "BD_min": 0.0, "BD_reasons": "", "Achievement_pct": 0.0, "Availability_pct": 100.0, "Performance_pct": 0.0, "OEE_pct": 0.0, "Status": "NotStarted"}, {"Source": "PlannedNoActual", "Location": "งานเครื่องข้อต่อ", "MachineNo": "ข้อต่อ-อัด", "JobNo": "ORW26-00072", "ProductName": "ข้อต่อ 4\" รอส่งทำเกลียว", "Thickness": "", "PlanStart": "15/05/2026 08:00", "PlanEnd": "15/05/2026 20:00", "PlannedMin": 720.0, "SetUpMin": 0.0, "TotalWorkMin": 600.0, "QtyPlan": 924.0, "CapPerMin": 1.0, "PlanOperator": "out source", "ActualOperator": "", "PlanStatus": "เดินงานตามปกติ", "QtyActual": 0.0, "BD_min": 0.0, "BD_reasons": "", "Achievement_pct": 0.0, "Availability_pct": 100.0, "Performance_pct": 0.0, "OEE_pct": 0.0, "Status": "NotStarted"}, {"Source": "Planned", "Location": "8E", "MachineNo": "TA_A06 (A15)", "JobNo": "OFM26-00282", "ProductName": "ZIGA มอก.107 น้ำเงินเกลียว 2\" หนา1.95 สกรีน 2.1 มม.16.5+/-", "Thickness": 1.95, "PlanStart": "15/05/2026 08:00", "PlanEnd": "15/05/2026 19:00", "PlannedMin": 660.0, "SetUpMin": 60.0, "TotalWorkMin": 340.0, "QtyPlan": 2100.0, "CapPerMin": 6.0, "PlanOperator": "นายวิชัย ด่านมะณี", "ActualOperator": "Wichai Danmanee", "PlanStatus": "เดินงานตามปกติ", "QtyActual": 2034.0, "BD_min": 90.0, "BD_reasons": "[08.00-09.00] แก้ไขเกลียวไหม้ ปรับมีดเปลี่ยนองศามีดใหม่ 60 | [16.00-17.00] ลมตกเกลียวชิ้นงานไม่ได้ 30 | [main] เกลียวไหม้ปรับองศามีดใหม่และปรับชิ้นงานหัว b", "Achievement_pct": 96.9, "Availability_pct": 73.5, "Performance_pct": 135.6, "OEE_pct": 99.7, "Status": "OnTarget"}, {"Source": "Unplanned", "Location": "ไม่ระบุ", "MachineNo": "TA_A04 (A12)", "JobNo": "OFM26-00274", "ProductName": "ท่อร้อยสายไฟDAIWA- RSC 1/2นิ้ว-Zero Spangle", "Thickness": "", "PlanStart": null, "PlanEnd": null, "PlannedMin": 0.0, "SetUpMin": 0.0, "TotalWorkMin": 0.0, "QtyPlan": 0.0, "CapPerMin": 0.0, "PlanOperator": "", "ActualOperator": "Narapat Saichandee", "PlanStatus": "", "QtyActual": 1500.0, "BD_min": 120.0, "BD_reasons": "[08.00-09.00] 08:00-09:00 SET UP เปลี่ยนลูกเบี้ยว+เปลี่ยนแค้มป์ | [09.00-10.00] 09:00-10:00 SET UP ลับมีดเปลี่ยนมี + ปรับชิ้นงานAB | [main] SET UP", "Achievement_pct": null, "Availability_pct": null, "Performance_pct": null, "OEE_pct": null, "Status": "Unplanned"}, {"Source": "Unplanned", "Location": "ไม่ระบุ", "MachineNo": "CH_A05 (B12)", "JobNo": "OFM26-00274", "ProductName": "ท่อร้อยสายไฟDAIWA- RSC 1/2นิ้ว-Zero Spangle", "Thickness": "", "PlanStart": null, "PlanEnd": null, "PlannedMin": 0.0, "SetUpMin": 0.0, "TotalWorkMin": 0.0, "QtyPlan": 0.0, "CapPerMin": 0.0, "PlanOperator": "", "ActualOperator": "Siwakorn Sukcharoen", "PlanStatus": "", "QtyActual": 1000.0, "BD_min": 0.0, "BD_reasons": "[09.00-10.00] 9.40เริ่มงาน | [11.00-12.00] 11.05จบงาน", "Achievement_pct": null, "Availability_pct": null, "Performance_pct": null, "OEE_pct": null, "Status": "Unplanned"}, {"Source": "Unplanned", "Location": "ไม่ระบุ", "MachineNo": "TA_A03 (A11)", "JobNo": "Memo69/008", "ProductName": "เบิกท่อ ZIGA มอก.107 น้ำเงินเรียบ 1/2\" มาเกลียว แล้วย้ายรหัส", "Thickness": "", "PlanStart": null, "PlanEnd": null, "PlannedMin": 0.0, "SetUpMin": 0.0, "TotalWorkMin": 0.0, "QtyPlan": 0.0, "CapPerMin": 0.0, "PlanOperator": "", "ActualOperator": "Siwakorn Sukcharoen", "PlanStatus": "", "QtyActual": 1000.0, "BD_min": 0.0, "BD_reasons": "[09.00-10.00] 9.40จบงาน", "Achievement_pct": null, "Availability_pct": null, "Performance_pct": null, "OEE_pct": null, "Status": "Unplanned"}, {"Source": "Unplanned", "Location": "ไม่ระบุ", "MachineNo": "ข้อต่อ-อัด", "JobNo": "ORW26-00093", "ProductName": "ข้อต่อ 4\" รอส่งทำเกลียว", "Thickness": "", "PlanStart": null, "PlanEnd": null, "PlannedMin": 0.0, "SetUpMin": 0.0, "TotalWorkMin": 0.0, "QtyPlan": 0.0, "CapPerMin": 0.0, "PlanOperator": "", "ActualOperator": "Vitas Vutivimon", "PlanStatus": "", "QtyActual": 190.0, "BD_min": 0.0, "BD_reasons": "[19.00-20.00] 190ตัว", "Achievement_pct": null, "Availability_pct": null, "Performance_pct": null, "OEE_pct": null, "Status": "Unplanned"}], "bottleneck_list": [{"Source": "Planned", "Location": "งานเครื่องข้อต่อ", "MachineNo": "CU_BL01(AMADA ใหญ่)", "JobNo": "ORW26-00102", "ProductName": "ข้อต่อ 4\" รอส่งทำเกลียว", "Thickness": "", "PlanStart": "15/05/2026 08:00", "PlanEnd": "15/05/2026 20:00", "PlannedMin": 720.0, "SetUpMin": 0.0, "TotalWorkMin": 555.0, "QtyPlan": 4620.0, "CapPerMin": 0.5, "PlanOperator": "นายวิทัต วุฒิวิมล", "ActualOperator": "Vitas Vutivimon", "PlanStatus": "เดินงานตามปกติ", "QtyActual": 195.0, "BD_min": 0.0, "BD_reasons": "[19.00-20.00] 195ตัว | [main] เปลี่ยนใบเลื่อย ใบเลื่อยติด", "Achievement_pct": 4.2, "Availability_pct": 100.0, "Performance_pct": 70.3, "OEE_pct": 70.3, "Status": "Bottleneck"}, {"Source": "Planned", "Location": "งานเครื่องข้อต่อ", "MachineNo": "CU_BL02(AMADA เล็ก)", "JobNo": "ORW26-00097", "ProductName": "ข้อต่อท่อร้อยสายไฟ HDG 1-1/4นิ้ว", "Thickness": 3.2, "PlanStart": "15/05/2026 08:00", "PlanEnd": "15/05/2026 20:00", "PlannedMin": 720.0, "SetUpMin": 0.0, "TotalWorkMin": 555.0, "QtyPlan": 9315.0, "CapPerMin": 4.5, "PlanOperator": "นายวิทัต วุฒิวิมล", "ActualOperator": "Vitas Vutivimon", "PlanStatus": "เดินงานตามปกติ", "QtyActual": 1020.0, "BD_min": 0.0, "BD_reasons": "[19.00-20.00] 1020ตัว | [main] ตั้งเครื่อง/แก้ไขงาน งานโก่ง/เปิดรอบตัดช้าลดงานเอียง", "Achievement_pct": 11.0, "Availability_pct": 100.0, "Performance_pct": 40.8, "OEE_pct": 40.8, "Status": "Bottleneck"}, {"Source": "Planned", "Location": "8C", "MachineNo": "CH_A06 (B14)", "JobNo": "OFM26-00223", "ProductName": "ท่อร้อยสายไฟDAIWA- EMT HDG 1/2นิ้ว-S01 (2P)", "Thickness": 0.9, "PlanStart": "15/05/2026 08:00", "PlanEnd": "15/05/2026 17:00", "PlannedMin": 540.0, "SetUpMin": 0.0, "TotalWorkMin": 405.0, "QtyPlan": 80000.0, "CapPerMin": 25.0, "PlanOperator": "นายกิตติพร เกษประเสริฐ", "ActualOperator": "Kittiporn Kesprasert", "PlanStatus": "เดินงานตามปกติ", "QtyActual": 9600.0, "BD_min": 10.0, "BD_reasons": "[16.00-17.00] 10 | [main] ลมหมด", "Achievement_pct": 12.0, "Availability_pct": 97.5, "Performance_pct": 97.2, "OEE_pct": 94.8, "Status": "Bottleneck"}, {"Source": "Planned", "Location": "2", "MachineNo": "RF_04", "JobNo": "OFM26-00189", "ProductName": "ท่อ HZO 4\"(100) มอก.276 -2562เกลียวหนา 4.5 มม.66.0+/-กก.Zero", "Thickness": 4.0, "PlanStart": "15/05/2026 08:00", "PlanEnd": "15/05/2026 09:30", "PlannedMin": 90.0, "SetUpMin": 0.0, "TotalWorkMin": 75.0, "QtyPlan": 800.0, "CapPerMin": 2.5, "PlanOperator": "นายภูมินทร์ มั่นศักดิ์,นายสงบ การบรรจง", "ActualOperator": "Poomin Mansak", "PlanStatus": "เดินงานตามปกติ", "QtyActual": 116.0, "BD_min": 285.0, "BD_reasons": "[08.00-09.00] แจ้งซ่อมลูกปืนโล SQ แตก | [13.00-14.00] มะกอกโรนำเหล็กเข้า  45 น.ท | [14.00-15.00] จบงาน | [main] แจ้งซ่อมลูกปืน Roll sq แตก", "Achievement_pct": 14.5, "Availability_pct": 0.0, "Performance_pct": null, "OEE_pct": null, "Status": "Bottleneck"}, {"Source": "Planned", "Location": "8C", "MachineNo": "TA_A04 (A12)", "JobNo": "OFM26-00298", "ProductName": "ท่อร้อยสายไฟDAIWA- IMC HDG 1/2นิ้ว", "Thickness": 1.6, "PlanStart": "15/05/2026 08:00", "PlanEnd": "15/05/2026 20:00", "PlannedMin": 720.0, "SetUpMin": 0.0, "TotalWorkMin": 460.0, "QtyPlan": 10000.0, "CapPerMin": 14.0, "PlanOperator": "นายนาราภัทร สายจันดี", "ActualOperator": "Narapat Saichandee", "PlanStatus": "เดินงานตามปกติ", "QtyActual": 2500.0, "BD_min": 70.0, "BD_reasons": "[13.00-14.00] 13:00-14:30 ท่อความหนาต่าง ปรับแค้มป์ปรับชิ้นงานAB | [17.30-18.00] 17:30-18:30 เปลี่ยนมีดAB", "Achievement_pct": 25.0, "Availability_pct": 84.8, "Performance_pct": 45.8, "OEE_pct": 38.8, "Status": "Bottleneck"}, {"Source": "Planned", "Location": "งานเครื่องข้อต่อ", "MachineNo": "ข้อต่อ-อัด", "JobNo": "ORW26-00090", "ProductName": "ข้อต่อท่อร้อยสายไฟ HDG 2นิ้ว-HDG", "Thickness": 4.0, "PlanStart": "15/05/2026 08:00", "PlanEnd": "15/05/2026 20:00", "PlannedMin": 720.0, "SetUpMin": 0.0, "TotalWorkMin": 600.0, "QtyPlan": 2200.0, "CapPerMin": 4.0, "PlanOperator": "นายวิทัต วุฒิวิมล", "ActualOperator": "Vitas Vutivimon", "PlanStatus": "เดินงานตามปกติ", "QtyActual": 630.0, "BD_min": 0.0, "BD_reasons": "[17.30-18.00] เริ่มอัด | [19.00-20.00] 210ตัว | [16.00-17.00] 420 | [main] ขึ้นงาตัดท่อ/ตั้งเครื่องตัด/แก้ไขเครื่องจักร", "Achievement_pct": 28.6, "Availability_pct": 100.0, "Performance_pct": 26.2, "OEE_pct": 26.2, "Status": "Bottleneck"}, {"Source": "Planned", "Location": "2", "MachineNo": "RF_04", "JobNo": "OFM26-00117", "ProductName": "ท่อมอก107เกลียวน้ำเงินM STK290-114.3(4\")x 2.8(3)x6ม46.0kgZ80", "Thickness": 2.8, "PlanStart": "15/05/2026 09:30", "PlanEnd": "15/05/2026 20:00", "PlannedMin": 630.0, "SetUpMin": 30.0, "TotalWorkMin": 555.0, "QtyPlan": 2000.0, "CapPerMin": 3.3, "PlanOperator": "นายภูมินทร์ มั่นศักดิ์,นายสงบ การบรรจง", "ActualOperator": "Poomin Mansak", "PlanStatus": "เดินงานตามปกติ", "QtyActual": 780.0, "BD_min": 0.0, "BD_reasons": "[14.00-15.00] ปรับ  OD", "Achievement_pct": 39.0, "Availability_pct": 100.0, "Performance_pct": 42.6, "OEE_pct": 42.6, "Status": "Bottleneck"}, {"Source": "Planned", "Location": "8C", "MachineNo": "RF_07", "JobNo": "OFM26-00298", "ProductName": "ท่อร้อยสายไฟDAIWA- IMC HDG 1/2นิ้ว", "Thickness": 1.6, "PlanStart": "15/05/2026 08:00", "PlanEnd": "15/05/2026 13:00", "PlannedMin": 300.0, "SetUpMin": 0.0, "TotalWorkMin": 285.0, "QtyPlan": 10000.0, "CapPerMin": 16.7, "PlanOperator": "นายภูษิต บัวชุม,นายอุเทน กองสิงห์", "ActualOperator": "Phusit Buachum", "PlanStatus": "เดินงานตามปกติ", "QtyActual": 5222.0, "BD_min": 0.0, "BD_reasons": "", "Achievement_pct": 52.2, "Availability_pct": 100.0, "Performance_pct": 109.7, "OEE_pct": 109.7, "Status": "Bottleneck"}, {"Source": "Planned", "Location": "8C", "MachineNo": "CH_A05 (B12)", "JobNo": "OFM26-00298", "ProductName": "ท่อร้อยสายไฟDAIWA- IMC HDG 1/2นิ้ว", "Thickness": 1.6, "PlanStart": "15/05/2026 08:00", "PlanEnd": "15/05/2026 20:00", "PlannedMin": 720.0, "SetUpMin": 0.0, "TotalWorkMin": 540.0, "QtyPlan": 10000.0, "CapPerMin": 14.0, "PlanOperator": "นายศิวะกรณ์ สุขเจริญ", "ActualOperator": "Siwakorn Sukcharoen", "PlanStatus": "เดินงานตามปกติ", "QtyActual": 5722.0, "BD_min": 35.0, "BD_reasons": "[11.00-12.00] 11.05เริ่มงาน20นาทีตั้งมีด | [12.00-13.00] พัก | [16.00-17.00] 15นาทีรอลม | [17.30-18.00] 30นาทีพัก", "Achievement_pct": 57.2, "Availability_pct": 93.5, "Performance_pct": 80.9, "OEE_pct": 75.6, "Status": "Bottleneck"}], "unfilled_list": [{"job": "OSE26-00137", "product": "55.80 x22 (OFM26-00266) , จับข้าง 11.20*11.20 -0.90", "machine": "SL_02", "qty_plan": 100000, "operator": "นายเอกภพ ภู่ศรีพงษ์,นายสุภาพ เม่นแก้ว,นายสามารถ ดาสม"}, {"job": "OFM26-00223", "product": "ท่อร้อยสายไฟDAIWA- EMT HDG 1/2นิ้ว-S01 (2P)", "machine": "LO_R04 (F4)", "qty_plan": 80000, "operator": "นายธัณพิสิฐ น้อมนุช"}, {"job": "OFM26-00288", "product": "ZIGA มอก.107 เหลืองเกลียว 3/4\" หนา1.3 สกรีน 1.4 มม. 4.7+/-", "machine": "RF_07", "qty_plan": 11200, "operator": "นายภูษิต บัวชุม,นายอุเทน กองสิงห์"}, {"job": "OFM26-00283", "product": "ZIGA มอก.107 แดงเรียบ 3/4\" หนา1.3 มม. สกรีน 1.4 มม. 4.7+/-", "machine": "CH_A02 (B9)", "qty_plan": 5700, "operator": "นายประสาท แก้วนันทะ,นายเปรมชัย รุ่งอินทร์"}, {"job": "ORW26-00074", "product": "ข้อต่อท่อร้อยสายไฟ HDG 2นิ้ว(RSC Super)", "machine": "ข้อต่อ-ล้าง", "qty_plan": 2200, "operator": "นายรุ่งโรจน์ วามะลุน"}, {"job": "OFM26-00291", "product": "ZIGA มอก.107 เหลืองเกลียว 2\" หนา1.7 มม. สกรีน 1.9 มม.14.3+/-", "machine": "RF_05", "qty_plan": 2000, "operator": "นายสุรเชษฐ์ สุดศิลา,นายสงวน สุดแก้ว"}, {"job": "OFM26-00276", "product": "ท่อ HZO 2\"(50) เกลียว หนา 3.2 มม สกรีน 3.6 มม.. 27.5+/- กก.", "machine": "TA_A06 (A15)", "qty_plan": 1600, "operator": "นายวิชัย ด่านมะณี"}, {"job": "OFM26-00264", "product": "ZIGA มอก.107 เหลืองเกลียว 1\" หนา1.6 มม. สกรีน 1.8 มม. 7.1+/-", "machine": "TA_A03 (A11)", "qty_plan": 1000, "operator": "นายประสาท แก้วนันทะ,นายเปรมชัย รุ่งอินทร์"}, {"job": "ORW26-00105", "product": "ท่อโค้ง90' IMC-HDG 2นิ้ว", "machine": "BE_M03 (เครื่องดัดโค้ง- size 1-1/2\" - 2\")", "qty_plan": 500, "operator": "นายสุภาพ เม่นแก้ว"}, {"job": "ORW26-00105", "product": "ท่อโค้ง90' IMC-HDG 2นิ้ว", "machine": "TA_M_ELBOW_02 (ทำเกลียวท่อโค้ง)", "qty_plan": 500, "operator": "นายเอกภพ ภู่ศรีพงษ์"}, {"job": "ORW26-00081", "product": "ท่อโค้ง90' IMC-HDG 1-1/2นิ้ว", "machine": "BE_M03 (เครื่องดัดโค้ง- size 1-1/2\" - 2\")", "qty_plan": 220, "operator": "นายสามารถ ดาสม"}, {"job": "ORW26-00082", "product": "ท่อโค้ง90' IMC-HDG 4นิ้ว", "machine": "BE_M05 (เครื่องดัดโค้ง- size 3\" - 5\" )", "qty_plan": 112, "operator": "นายมนตรี รักเสมอวงค์"}, {"job": "ORW26-00084", "product": "ท่อโค้ง90' RSC 4 นิ้ว", "machine": "BE_M05 (เครื่องดัดโค้ง- size 3\" - 5\" )", "qty_plan": 100, "operator": "นายมนตรี รักเสมอวงค์"}]};
 
-// Generated time
 document.getElementById('gen-time').textContent = new Date().toLocaleString('th-TH', {
-  year: 'numeric', month: 'long', day: 'numeric',
-  hour: '2-digit', minute: '2-digit'
+  year: 'numeric', month: 'long', day: 'numeric', hour: '2-digit', minute: '2-digit'
 });
 
-// ===== Unfilled cards =====
+// Unfilled — GROUP BY JOB NO
 (function(){
   const root = document.getElementById('unfilled-cards');
   if (!DATA.unfilled_list || DATA.unfilled_list.length === 0) {
     root.innerHTML = '<div class="empty-state">✓ ใบงานกรอกรายงานครบทุกใบ</div>';
     return;
   }
-  // Group by JobNo
   const byJob = {};
   DATA.unfilled_list.forEach(r => {
     const job = r.job || 'ไม่ระบุ';
     if (!byJob[job]) byJob[job] = [];
     byJob[job].push(r);
   });
-  // Sort by total qty desc (biggest unfilled jobs first)
   const jobKeys = Object.keys(byJob).sort((a,b) => {
     const sa = byJob[a].reduce((s,i) => s + (i.qty_plan||0), 0);
     const sb = byJob[b].reduce((s,i) => s + (i.qty_plan||0), 0);
@@ -474,7 +238,7 @@ document.getElementById('gen-time').textContent = new Date().toLocaleString('th-
   });
 })();
 
-// ===== Bottleneck cards =====
+// Bottleneck
 (function(){
   const root = document.getElementById('bottleneck-list');
   if (!DATA.bottleneck_list || DATA.bottleneck_list.length === 0) {
@@ -495,32 +259,19 @@ document.getElementById('gen-time').textContent = new Date().toLocaleString('th-
           <b>Operator:</b> ${r.ActualOperator || r.PlanOperator || '—'}
         </div>
       </div>
-      <div class="pct">
-        ${r.Achievement_pct}%
-        <span class="small">Achievement</span>
-      </div>
+      <div class="pct">${r.Achievement_pct}%<span class="small">Achievement</span></div>
     `;
     root.appendChild(card);
   });
 })();
 
-// ===== Job table =====
 function bdClass(v) { if (v >= 60) return 'high'; if (v > 0) return 'med'; return ''; }
 function achClass(p) {
   if (p === null || p === undefined) return '';
-  if (p > 110) return 'over';
-  if (p >= 90) return 'ok';
-  if (p >= 70) return 'med';
-  return 'bad';
+  if (p > 110) return 'over'; if (p >= 90) return 'ok'; if (p >= 70) return 'med'; return 'bad';
 }
-function fmt(v) {
-  if (v === null || v === undefined || v === '') return '—';
-  return v;
-}
-function fmtNum(v) {
-  if (v === null || v === undefined || v === 0) return '—';
-  return v.toLocaleString();
-}
+function fmt(v) { if (v === null || v === undefined || v === '') return '—'; return v; }
+function fmtNum(v) { if (v === null || v === undefined || v === 0) return '—'; return v.toLocaleString(); }
 
 function renderJobs(filter) {
   const tbody = document.getElementById('job-tbody');
@@ -547,7 +298,6 @@ function renderJobs(filter) {
     tbody.appendChild(tr);
   });
 }
-
 renderJobs('all');
 
 document.querySelectorAll('#chips .chip').forEach(chip => {
@@ -558,7 +308,7 @@ document.querySelectorAll('#chips .chip').forEach(chip => {
   });
 });
 
-// ===== Breakdown table =====
+// Breakdown
 (function(){
   const tbody = document.getElementById('bd-tbody');
   const bdList = DATA.records.filter(r => (r.BD_min || 0) > 0).sort((a,b) => (b.BD_min||0) - (a.BD_min||0));
@@ -581,11 +331,7 @@ document.querySelectorAll('#chips .chip').forEach(chip => {
   const tr = document.createElement('tr');
   tr.style.background = 'var(--green-bg)';
   tr.style.fontWeight = '600';
-  tr.innerHTML = `
-    <td colspan="3" style="text-align:right">TOTAL</td>
-    <td class="bd-cell">${total}</td>
-    <td></td>
-  `;
+  tr.innerHTML = `<td colspan="3" style="text-align:right">TOTAL</td><td class="bd-cell">${total}</td><td></td>`;
   tbody.appendChild(tr);
 })();
 </script>
